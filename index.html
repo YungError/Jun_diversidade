@@ -46,26 +46,11 @@
   }
 
   /* ========== SECTION COLOR THEMES ========== */
-  body.theme-rainbow {
-    --bg: #0d0620;
-    --text: #fff;
-  }
-  body.theme-agender {
-    --bg: #111;
-    --text: #eee;
-  }
-  body.theme-trans {
-    --bg: #0a1a2e;
-    --text: #e8f4fd;
-  }
-  body.theme-bi {
-    --bg: #1a0520;
-    --text: #f5e6ff;
-  }
-  body.theme-pride {
-    --bg: #1a0a00;
-    --text: #fff5e6;
-  }
+  body.theme-rainbow { --bg: #0d0620; --text: #fff; }
+  body.theme-agender { --bg: #111; --text: #eee; }
+  body.theme-trans { --bg: #0a1a2e; --text: #e8f4fd; }
+  body.theme-bi { --bg: #1a0520; --text: #f5e6ff; }
+  body.theme-pride { --bg: #1a0a00; --text: #fff5e6; }
 
   /* ========== SCROLLBAR ========== */
   ::-webkit-scrollbar { width: 6px; }
@@ -199,8 +184,6 @@
     display:flex; gap:3rem; justify-content:center; align-items:flex-end;
     animation: fadeUp 1s 0.4s ease both;
   }
-
-  /* Mascote SVG styles */
   .mascot-container { text-align:center; }
   .mascot-container p { font-size:0.8rem; color:rgba(255,255,255,0.4); margin-top:0.5rem; }
 
@@ -227,158 +210,66 @@
   }
 
   /* ========== FLYERS / BANNERS ========== */
-  .banners-grid {
-    display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;
-  }
-  .banner-card {
-    border-radius:16px; overflow:hidden; position:relative;
-    height:220px; cursor:pointer;
-    transition: transform 0.3s;
-  }
+  .banners-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem; }
+  .banner-card { border-radius:16px; overflow:hidden; position:relative; height:220px; cursor:pointer; transition: transform 0.3s; }
   .banner-card:hover { transform:scale(1.02); }
   .banner-card svg { width:100%; height:100%; }
 
   /* ========== LGBTQIAPN+ INFO ========== */
   #sigla { background: linear-gradient(180deg, transparent, rgba(196,75,255,0.05), transparent); }
-  .sigla-grid {
-    display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem;
-  }
+  .sigla-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem; }
   .sigla-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius:16px;
-    padding: 2rem;
-    transition: transform 0.3s, border-color 0.3s;
-    position:relative; overflow:hidden;
+    background: var(--card); border: 1px solid var(--border); border-radius:16px; padding: 2rem;
+    transition: transform 0.3s, border-color 0.3s; position:relative; overflow:hidden;
   }
-  .sigla-card::before {
-    content:''; position:absolute; top:0; left:0; right:0; height:3px;
-  }
+  .sigla-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
   .sigla-card:hover { transform:translateY(-4px); }
-  .sigla-letter {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem; font-weight:900; line-height:1;
-    margin-bottom:0.5rem;
-  }
+  .sigla-letter { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight:900; line-height:1; margin-bottom:0.5rem; }
   .sigla-name { font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; }
   .sigla-desc { font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.65; }
 
   /* ========== AGÊNERO SECTION ========== */
-  #agender {
-    background: linear-gradient(180deg, #111 0%, #0a0a0a 50%, #111 100%);
-    position:relative; overflow:hidden;
-  }
-  #agender::before {
-    content:'';
-    position:absolute; inset:0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(184,244,131,0.05) 50%, rgba(186,186,186,0.05) 100%);
-    pointer-events:none;
-  }
-  .agender-hero {
-    display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
-    margin-bottom: 4rem;
-  }
+  #agender { background: linear-gradient(180deg, #111 0%, #0a0a0a 50%, #111 100%); position:relative; overflow:hidden; }
+  #agender::before { content:''; position:absolute; inset:0; background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(184,244,131,0.05) 50%, rgba(186,186,186,0.05) 100%); pointer-events:none; }
+  .agender-hero { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-bottom: 4rem; }
   @media(max-width:768px) { .agender-hero { grid-template-columns:1fr; } }
-  .agender-flag-display {
-    display:flex; flex-direction:column; gap:0; border-radius:12px; overflow:hidden;
-    height:200px; box-shadow: 0 0 60px rgba(184,244,131,0.15);
-  }
+  .agender-flag-display { display:flex; flex-direction:column; gap:0; border-radius:12px; overflow:hidden; height:200px; box-shadow: 0 0 60px rgba(184,244,131,0.15); }
   .agender-flag-display .stripe { flex:1; }
-  .agender-famous-grid {
-    display:grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap:1.2rem;
-    margin-top:2rem;
-  }
-  .famous-card {
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:12px; padding:1.5rem;
-    text-align:center;
-  }
-  .famous-avatar {
-    width:60px; height:60px; border-radius:50%;
-    margin:0 auto 0.8rem;
-    display:flex; align-items:center; justify-content:center;
-    font-size:1.8rem;
-    background:linear-gradient(135deg,#000,#BABABA);
-  }
+  .agender-famous-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap:1.2rem; margin-top:2rem; }
+  .famous-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.5rem; text-align:center; }
+  .famous-avatar { width:60px; height:60px; border-radius:50%; margin:0 auto 0.8rem; display:flex; align-items:center; justify-content:center; font-size:1.8rem; background:linear-gradient(135deg,#000,#BABABA); }
   .famous-name { font-weight:600; font-size:0.9rem; margin-bottom:0.3rem; }
   .famous-role { font-size:0.78rem; color:rgba(255,255,255,0.4); }
-  .curiosidade-box {
-    background: rgba(184,244,131,0.06);
-    border:1px solid rgba(184,244,131,0.2);
-    border-radius:12px; padding:1.5rem;
-    margin-top:1.5rem;
-  }
+  .curiosidade-box { background: rgba(184,244,131,0.06); border:1px solid rgba(184,244,131,0.2); border-radius:12px; padding:1.5rem; margin-top:1.5rem; }
   .curiosidade-box h4 { color:#B8F483; margin-bottom:0.8rem; font-size:1rem; }
   .curiosidade-box p { font-size:0.88rem; color:rgba(255,255,255,0.6); line-height:1.7; }
   .slogan-grid { display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:2rem; }
-  .slogan-pill {
-    padding:0.5rem 1.2rem;
-    border-radius:50px;
-    font-size:0.82rem;
-    font-weight:500;
-    border:1px solid;
-  }
+  .slogan-pill { padding:0.5rem 1.2rem; border-radius:50px; font-size:0.82rem; font-weight:500; border:1px solid; }
 
   /* ========== COMUNIDADE ========== */
   #community { background: rgba(255,255,255,0.01); }
-  .posts-grid {
-    display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem;
-  }
-  .post-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius:16px; padding:1.5rem;
-    transition: border-color 0.3s;
-  }
+  .posts-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
+  .post-card { background: var(--card); border: 1px solid var(--border); border-radius:16px; padding:1.5rem; transition: border-color 0.3s; }
   .post-card:hover { border-color: rgba(255,107,157,0.3); }
   .post-header { display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem; }
-  .post-avatar {
-    width:38px; height:38px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-size:1.1rem;
-    font-weight:600;
-  }
+  .post-avatar { width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:600; }
   .post-user { font-weight:600; font-size:0.9rem; }
   .post-badge { font-size:0.68rem; color:rgba(255,255,255,0.4); }
   .post-text { font-size:0.9rem; line-height:1.65; color:rgba(255,255,255,0.75); margin-bottom:1rem; }
   .post-actions { display:flex; gap:1.2rem; }
   .post-action { background:none; border:none; color:rgba(255,255,255,0.4); font-size:0.82rem; cursor:pointer; transition:color 0.2s; display:flex; align-items:center; gap:0.3rem; }
   .post-action:hover { color:#FF6BCD; }
-  .new-post-box {
-    background: var(--card); border:1px solid var(--border);
-    border-radius:16px; padding:1.5rem; margin-bottom:2rem;
-  }
-  .new-post-box textarea {
-    width:100%; background:rgba(255,255,255,0.04);
-    border:1px solid var(--border); border-radius:8px;
-    color:#fff; padding:0.8rem; font-size:0.9rem;
-    font-family:inherit; resize:vertical; min-height:80px;
-  }
+  .new-post-box { background: var(--card); border:1px solid var(--border); border-radius:16px; padding:1.5rem; margin-bottom:2rem; }
+  .new-post-box textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:8px; color:#fff; padding:0.8rem; font-size:0.9rem; font-family:inherit; resize:vertical; min-height:80px; }
   .new-post-box .post-footer { display:flex; justify-content:space-between; align-items:center; margin-top:0.8rem; }
 
   /* ========== EVENTOS ========== */
   #events { background: linear-gradient(180deg, transparent, rgba(75,170,255,0.03), transparent); }
-  .events-grid {
-    display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem;
-  }
-  .event-card {
-    background: var(--card); border:1px solid var(--border);
-    border-radius:16px; overflow:hidden;
-    transition: transform 0.3s;
-  }
+  .events-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
+  .event-card { background: var(--card); border: 1px solid var(--border); border-radius:16px; overflow:hidden; transition: transform 0.3s; }
   .event-card:hover { transform:translateY(-4px); }
-  .event-banner {
-    height:160px; display:flex; align-items:center; justify-content:center;
-    font-size:3rem; position:relative;
-  }
-  .event-banner-tag {
-    position:absolute; top:12px; right:12px;
-    background:rgba(0,0,0,0.5); backdrop-filter:blur(10px);
-    padding:0.25rem 0.7rem; border-radius:50px;
-    font-size:0.72rem; font-weight:600; color:#fff;
-    border:1px solid rgba(255,255,255,0.15);
-  }
+  .event-banner { height:160px; display:flex; align-items:center; justify-content:center; font-size:3rem; position:relative; }
+  .event-banner-tag { position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.5); backdrop-filter:blur(10px); padding:0.25rem 0.7rem; border-radius:50px; font-size:0.72rem; font-weight:600; color:#fff; border:1px solid rgba(255,255,255,0.15); }
   .event-body { padding:1.5rem; }
   .event-date { font-size:0.75rem; color:var(--accent); font-weight:600; letter-spacing:0.05em; margin-bottom:0.5rem; }
   .event-title { font-size:1.05rem; font-weight:700; margin-bottom:0.5rem; }
@@ -390,210 +281,74 @@
   .event-spots { font-size:0.75rem; color:rgba(255,255,255,0.4); }
 
   /* ========== CRIAR EVENTO (MODAL) ========== */
-  .modal-overlay {
-    display:none; position:fixed; inset:0; z-index:2000;
-    background:rgba(0,0,0,0.8); backdrop-filter:blur(10px);
-    overflow-y:auto; padding:2rem;
-  }
+  .modal-overlay { display:none; position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); overflow-y:auto; padding:2rem; }
   .modal-overlay.open { display:flex; align-items:flex-start; justify-content:center; }
-  .modal-box {
-    background:#141420; border:1px solid rgba(255,255,255,0.1);
-    border-radius:20px; width:100%; max-width:700px;
-    padding:2.5rem; position:relative; margin:auto;
-  }
-  .modal-close {
-    position:absolute; top:1.5rem; right:1.5rem;
-    background:rgba(255,255,255,0.05); border:none; color:#fff;
-    width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.1rem;
-    display:flex; align-items:center; justify-content:center;
-  }
+  .modal-box { background:#141420; border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:100%; max-width:700px; padding:2.5rem; position:relative; margin:auto; }
+  .modal-close { position:absolute; top:1.5rem; right:1.5rem; background:rgba(255,255,255,0.05); border:none; color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; }
   .modal-title { font-family:'Playfair Display',serif; font-size:1.8rem; margin-bottom:2rem; }
   .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
   @media(max-width:600px) { .form-grid { grid-template-columns:1fr; } }
   .form-group { margin-bottom:1.2rem; }
   .form-group.full { grid-column:1/-1; }
   .form-group label { display:block; font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.6); margin-bottom:0.4rem; letter-spacing:0.04em; }
-  .form-group input, .form-group textarea, .form-group select {
-    width:100%; background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1); border-radius:10px;
-    color:#fff; padding:0.75rem 1rem; font-size:0.9rem; font-family:inherit;
-    transition: border-color 0.3s;
-  }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-    outline:none; border-color:rgba(196,75,255,0.5);
-  }
+  .form-group input, .form-group textarea, .form-group select { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; color:#fff; padding:0.75rem 1rem; font-size:0.9rem; font-family:inherit; transition: border-color 0.3s; }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline:none; border-color:rgba(196,75,255,0.5); }
   .form-group select option { background:#1a1a2e; }
   .form-group textarea { min-height:100px; resize:vertical; }
-  .ticket-types {
-    display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem;
-  }
+  .ticket-types { display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; }
   @media(max-width:500px) { .ticket-types { grid-template-columns:1fr; } }
-  .ticket-type {
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:10px; padding:1rem; cursor:pointer;
-    transition:border-color 0.2s;
-  }
+  .ticket-type { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:1rem; cursor:pointer; transition:border-color 0.2s; }
   .ticket-type.selected { border-color:rgba(196,75,255,0.6); background:rgba(196,75,255,0.08); }
   .ticket-type-name { font-weight:600; font-size:0.9rem; margin-bottom:0.3rem; }
   .ticket-type-desc { font-size:0.75rem; color:rgba(255,255,255,0.4); }
   .form-section-title { font-size:0.9rem; font-weight:700; color:rgba(255,255,255,0.7); margin:1.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); grid-column:1/-1; }
 
-  /* ========== PERFIL ========== */
+  /* ========== PERFIL DE ABAS ========== */
   #profile { background:rgba(255,255,255,0.01); }
-  .profile-form {
-    display:grid; grid-template-columns:280px 1fr; gap:3rem; align-items:start;
-  }
+  .profile-form { display:grid; grid-template-columns:320px 1fr; gap:3rem; align-items:start; }
   @media(max-width:900px) { .profile-form { grid-template-columns:1fr; } }
   .profile-sidebar { position:sticky; top:100px; }
-  .profile-card-preview {
-    background: linear-gradient(135deg, rgba(196,75,255,0.15), rgba(75,170,255,0.1));
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:20px; padding:2rem; text-align:center;
-  }
-  .profile-avatar-upload {
-    width:100px; height:100px; border-radius:50%;
-    background:linear-gradient(135deg,#C44BFF,#4BAAFF);
-    display:flex; align-items:center; justify-content:center;
-    font-size:2.5rem; margin:0 auto 1rem;
-    cursor:pointer; position:relative; overflow:hidden;
-  }
+  .profile-card-preview { background: linear-gradient(135deg, rgba(196,75,255,0.12), rgba(75,170,255,0.08)); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:2rem; text-align:center; }
+  .profile-avatar-upload { width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg,#C44BFF,#4BAAFF); display:flex; align-items:center; justify-content:center; font-size:2.5rem; margin:0 auto 1rem; cursor:pointer; position:relative; overflow:hidden; }
   .profile-avatar-upload input { position:absolute; inset:0; opacity:0; cursor:pointer; }
-  .profile-name-preview { font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:0.3rem; }
-  .profile-bio-preview { font-size:0.82rem; color:rgba(255,255,255,0.45); }
-  .identity-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; justify-content:center; }
-  .identity-tag {
-    padding:0.3rem 0.8rem; border-radius:50px;
-    font-size:0.72rem; font-weight:600;
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.12);
-  }
-  .badges-row { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; justify-content:center; }
-  .badge {
-    padding:0.25rem 0.6rem; border-radius:50px;
-    font-size:0.68rem;
-    background: rgba(196,75,255,0.15);
-    border:1px solid rgba(196,75,255,0.3);
-    color:#C44BFF;
-  }
+  .profile-name-preview { font-family:'Playfair Display',serif; font-size:1.4rem; margin-bottom:0.2rem; }
+  .profile-pronouns-preview { font-size:0.75rem; color:var(--accent); font-weight:600; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em; }
+  .profile-bio-preview { font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.6; margin-bottom:1rem; }
+  .identity-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; justify-content:center; }
+  .identity-tag { padding:0.3rem 0.8rem; border-radius:50px; font-size:0.72rem; font-weight:600; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); }
+  .badges-row { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1.2rem; justify-content:center; }
+  .badge { padding:0.3rem 0.7rem; border-radius:50px; font-size:0.7rem; font-weight:500; background: rgba(196,75,255,0.12); border:1px solid rgba(196,75,255,0.25); color:#C44BFF; }
+  
   .tab-nav { display:flex; gap:0.5rem; margin-bottom:2rem; flex-wrap:wrap; }
-  .tab-btn {
-    padding:0.6rem 1.2rem; border-radius:50px;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    color:rgba(255,255,255,0.5); font-size:0.82rem; cursor:pointer;
-    transition:all 0.2s;
-  }
+  .tab-btn { padding:0.6rem 1.2rem; border-radius:50px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:rgba(255,255,255,0.5); font-size:0.82rem; cursor:pointer; transition:all 0.2s; }
   .tab-btn.active { background:rgba(196,75,255,0.15); border-color:rgba(196,75,255,0.4); color:#C44BFF; }
   .tab-panel { display:none; }
   .tab-panel.active { display:block; }
 
   /* ========== ANIMATIONS ========== */
-  @keyframes fadeUp {
-    from { opacity:0; transform:translateY(30px); }
-    to { opacity:1; transform:translateY(0); }
-  }
-  @keyframes fadeDown {
-    from { opacity:0; transform:translateY(-20px); }
-    to { opacity:1; transform:translateY(0); }
-  }
-  @keyframes float {
-    0%,100% { transform:translateY(0) rotate(0deg); }
-    50% { transform:translateY(-12px) rotate(2deg); }
-  }
-  @keyframes rainbow-cycle {
-    0% { filter:hue-rotate(0deg); }
-    100% { filter:hue-rotate(360deg); }
-  }
-  @keyframes pulse-glow {
-    0%,100% { box-shadow:0 0 20px rgba(196,75,255,0.3); }
-    50% { box-shadow:0 0 40px rgba(196,75,255,0.6); }
-  }
-
+  @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes float { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-12px) rotate(2deg); } }
   .floating { animation: float 4s ease-in-out infinite; }
 
-  /* ========== RAINBOW PROGRESS BAR ========== */
-  #progress-bar {
-    position:fixed; top:0; left:0; height:3px;
-    background:linear-gradient(90deg,#FF0018,#FF8C00,#FFED00,#008026,#004DFF,#750787);
-    z-index:9999; transition:width 0.1s;
-  }
-
-  /* ========== FOOTER ========== */
-  footer {
-    background:rgba(0,0,0,0.5);
-    border-top:1px solid var(--border);
-    padding:3rem 2rem;
-    text-align:center;
-  }
+  /* ========== PROGRESS BAR & NOTIF ========== */
+  #progress-bar { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,#FF0018,#FF8C00,#FFED00,#008026,#004DFF,#750787); z-index:9999; transition:width 0.1s; }
+  footer { background:rgba(0,0,0,0.5); border-top:1px solid var(--border); padding:3rem 2rem; text-align:center; }
   footer p { font-size:0.82rem; color:rgba(255,255,255,0.3); }
-  .footer-rainbow {
-    height:3px;
-    background:linear-gradient(90deg,#FF0018 16.6%,#FF8C00 33.2%,#FFED00 49.8%,#008026 66.4%,#004DFF 83%,#750787 100%);
-    margin-bottom:2rem;
-  }
-
-  /* ========== MISC ========== */
-  .divider {
-    height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-    margin:2rem 0;
-  }
-  .tag-chip {
-    display:inline-block; padding:0.3rem 0.8rem;
-    border-radius:50px; font-size:0.72rem; font-weight:600;
-    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
-    margin:0.2rem;
-  }
-  .notification {
-    position:fixed; bottom:2rem; right:2rem; z-index:3000;
-    background:#1a1a2e; border:1px solid rgba(196,75,255,0.3);
-    border-radius:12px; padding:1rem 1.5rem;
-    font-size:0.88rem; transform:translateY(100px); opacity:0;
-    transition:all 0.4s;
-    max-width:300px;
-  }
+  .footer-rainbow { height:3px; background:linear-gradient(90deg,#FF0018 16.6%,#FF8C00 33.2%,#FFED00 49.8%,#008026 66.4%,#004DFF 83%,#750787 100%); margin-bottom:2rem; }
+  .divider { height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); margin:2rem 0; }
+  .tag-chip { display:inline-block; padding:0.4rem 0.9rem; border-radius:50px; font-size:0.78rem; font-weight:500; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); margin:0.25rem; cursor:pointer; transition:all 0.2s; }
+  .tag-chip.active { background:rgba(196,75,255,0.18); border-color:rgba(196,75,255,0.5); color:#efd8ff; }
+  .notification { position:fixed; bottom:2rem; right:2rem; z-index:3000; background:#1a1a2e; border:1px solid rgba(196,75,255,0.3); border-radius:12px; padding:1rem 1.5rem; font-size:0.88rem; transform:translateY(100px); opacity:0; transition:all 0.4s; max-width:300px; }
   .notification.show { transform:translateY(0); opacity:1; }
-
-  /* ========== QR CODE STYLE ========== */
-  .qr-placeholder {
-    width:80px; height:80px;
-    background: repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%) 0 0/10px 10px;
-    border:3px solid #fff; border-radius:4px;
-    display:inline-block;
-    opacity:0.8;
-  }
-
-  /* ========== STATS ROW ========== */
-  .stats-row {
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1.5rem;
-    margin:3rem 0;
-  }
-  .stat-box {
-    background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.5rem;
-    text-align:center;
-  }
-  .stat-number {
-    font-family:'Playfair Display',serif; font-size:2.5rem;
-    background:linear-gradient(135deg,#C44BFF,#FF6BCD);
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-  }
-  .stat-label { font-size:0.78rem; color:rgba(255,255,255,0.4); margin-top:0.3rem; }
-
-  /* ========== GAMIFICATION ========== */
-  .level-bar {
-    background:rgba(255,255,255,0.06); border-radius:50px; height:8px; overflow:hidden; margin-top:0.5rem;
-  }
-  .level-fill {
-    height:100%; border-radius:50px;
-    background:linear-gradient(90deg,#C44BFF,#FF6BCD);
-    transition:width 1s ease;
-  }
+  .qr-placeholder { width:80px; height:80px; background: repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%) 0 0/10px 10px; border:3px solid #fff; border-radius:4px; display:inline-block; opacity:0.8; }
+  .level-bar { background:rgba(255,255,255,0.06); border-radius:50px; height:8px; overflow:hidden; margin-top:0.5rem; }
+  .level-fill { height:100%; border-radius:50px; background:linear-gradient(90deg,#C44BFF,#FF6BCD); transition:width 1s ease; }
 </style>
 </head>
 <body>
 
 <div id="progress-bar" style="width:0%"></div>
-
 <div class="notification" id="notif"></div>
 
 <nav>
@@ -618,10 +373,7 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">🌈 Etec — Mês da Diversidade · Junho 2025</div>
-    <h1 class="hero-title">
-      Seu espaço de<br>
-      <span class="gradient-text">Orgulho & Conexão</span>
-    </h1>
+    <h1 class="hero-title">Seu espaço de<br><span class="gradient-text">Orgulho & Conexão</span></h1>
     <p class="hero-sub">Um lugar seguro para aprender, celebrar identidades, conectar pessoas e criar eventos que transformam comunidades.</p>
     <div class="hero-btns">
       <a href="#sigla" class="btn-primary">Explorar Identidades</a>
@@ -636,21 +388,11 @@
           <path d="M35 58 Q40 30 65 32 Q90 30 95 58" fill="none" stroke="#FF0018" stroke-width="6" stroke-linecap="round"/>
           <path d="M37 65 Q38 38 65 36 Q92 38 93 65" fill="none" stroke="#FF8C00" stroke-width="5" stroke-linecap="round"/>
           <path d="M38 70 Q40 45 65 42 Q90 45 92 70" fill="none" stroke="#FFED00" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="55" cy="65" r="5" fill="#333"/>
-          <circle cx="75" cy="65" r="5" fill="#333"/>
-          <circle cx="57" cy="63" r="2" fill="#fff"/>
-          <circle cx="77" cy="63" r="2" fill="#fff"/>
+          <circle cx="55" cy="65" r="5" fill="#333"/><circle cx="75" cy="65" r="5" fill="#333"/>
           <path d="M56 76 Q65 84 74 76" fill="none" stroke="#c0604d" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="50" cy="73" r="7" fill="rgba(255,100,100,0.3)"/>
-          <circle cx="80" cy="73" r="7" fill="rgba(255,100,100,0.3)"/>
           <rect x="8" y="100" width="28" height="16" rx="2" fill="#FF0018"/>
-          <rect x="8" y="106" width="28" height="3" fill="#FF8C00"/>
-          <rect x="8" y="109" width="28" height="3" fill="#FFED00"/>
-          <rect x="8" y="112" width="28" height="4" fill="#008026"/>
+          <rect x="8" y="106" width="28" height="3" fill="#FF8C00"/><rect x="8" y="109" width="28" height="3" fill="#FFED00"/><rect x="8" y="112" width="28" height="4" fill="#008026"/>
           <line x1="8" y1="100" x2="8" y2="135" stroke="#8B4513" stroke-width="3"/>
-          <text x="92" y="50" font-size="14">✨</text>
-          <text x="28" y="45" font-size="12">⭐</text>
-          <text x="100" y="90" font-size="11">💫</text>
         </svg>
         <p>Arco — Mascote LGBT+</p>
       </div>
@@ -663,21 +405,10 @@
           <path d="M37 63 Q40 35 65 34 Q90 35 93 63" fill="none" stroke="#BABABA" stroke-width="6" stroke-linecap="round"/>
           <path d="M38 68 Q40 42 65 40 Q90 42 92 68" fill="none" stroke="#FFF" stroke-width="5" stroke-linecap="round"/>
           <path d="M38 73 Q40 48 65 46 Q90 48 92 73" fill="none" stroke="#B8F483" stroke-width="4" stroke-linecap="round"/>
-          <ellipse cx="55" cy="65" rx="5" ry="4" fill="#222"/>
-          <ellipse cx="75" cy="65" rx="5" ry="4" fill="#222"/>
-          <circle cx="57" cy="63" r="2" fill="#fff"/>
-          <circle cx="77" cy="63" r="2" fill="#fff"/>
+          <ellipse cx="55" cy="65" rx="5" ry="4" fill="#222"/><ellipse cx="75" cy="65" rx="5" ry="4" fill="#222"/>
           <path d="M57 76 Q65 81 73 76" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"/>
           <rect x="8" y="100" width="28" height="16" rx="2" fill="#000"/>
-          <rect x="8" y="104" width="28" height="3" fill="#BABABA"/>
-          <rect x="8" y="107" width="28" height="3" fill="#FFF"/>
-          <rect x="8" y="110" width="28" height="3" fill="#B8F483"/>
-          <rect x="8" y="113" width="28" height="3" fill="#FFF"/>
           <line x1="8" y1="100" x2="8" y2="135" stroke="#555" stroke-width="3"/>
-          <circle cx="105" cy="55" r="10" fill="none" stroke="#B8F483" stroke-width="2.5"/>
-          <text x="101" y="59" font-size="11" fill="#B8F483">∅</text>
-          <text x="90" y="90" font-size="12">💚</text>
-          <text x="28" y="45" font-size="11">⚪</text>
         </svg>
         <p>Neo — Mascote Agênero</p>
       </div>
@@ -689,64 +420,25 @@
   <div class="container">
     <span class="section-tag">Flyers & Banners</span>
     <h2 class="section-title">Celebre a Diversidade</h2>
-    <p class="section-desc">Arte e informação para compartilhar e inspirar.</p>
     <div class="banners-grid">
       <div class="banner-card">
         <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#1a0030"/>
-              <stop offset="100%" style="stop-color:#000820"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="220" fill="url(#bg1)"/>
-          <rect y="0" width="400" height="36" fill="#FF0018" opacity="0.85"/>
-          <rect y="36" width="400" height="37" fill="#FF8C00" opacity="0.85"/>
-          <rect y="73" width="400" height="37" fill="#FFED00" opacity="0.85"/>
-          <rect y="110" width="400" height="37" fill="#008026" opacity="0.85"/>
-          <rect y="147" width="400" height="37" fill="#004DFF" opacity="0.85"/>
-          <rect y="184" width="400" height="36" fill="#750787" opacity="0.85"/>
-          <rect width="400" height="220" fill="rgba(0,0,0,0.55)"/>
-          <text x="200" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="bold" fill="white">MÊS DO</text>
-          <text x="200" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="44" font-weight="bold" fill="#FF6BCD" letter-spacing="4">ORGULHO</text>
-          <text x="200" y="180" text-anchor="middle" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" letter-spacing="2">ETEC CELEBRA A DIVERSIDADE</text>
+          <rect width="400" height="220" fill="#1a0030"/>
+          <text x="200" y="90" text-anchor="middle" font-family="serif" font-size="34" fill="white">MÊS DO</text>
+          <text x="200" y="140" text-anchor="middle" font-family="serif" font-size="40" fill="#FF6BCD" font-weight="bold">ORGULHO</text>
         </svg>
       </div>
-
       <div class="banner-card">
         <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#111111"/>
-              <stop offset="100%" style="stop-color:#2c2c2c"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="220" fill="url(#bg2)"/>
-          <rect y="10" width="400" height="28" fill="#000000"/>
-          <rect y="38" width="400" height="28" fill="#BABABA"/>
-          <rect y="66" width="400" height="28" fill="#FFFFFF"/>
-          <rect y="94" width="400" height="32" fill="#B8F483"/>
-          <rect y="126" width="400" height="28" fill="#FFFFFF"/>
-          <rect y="154" width="400" height="28" fill="#BABABA"/>
-          <rect y="182" width="400" height="28" fill="#000000"/>
-          <rect width="400" height="220" fill="rgba(0,0,0,0.7)"/>
-          <text x="40" y="85" font-family="sans-serif" font-size="28" font-weight="800" fill="#B8F483" letter-spacing="1">AGÊNERO</text>
-          <text x="40" y="120" font-family="sans-serif" font-size="16" font-weight="400" fill="#FFFFFF">Identidade além do binarismo.</text>
-          <text x="40" y="150" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.5)" letter-spacing="3">ORGULHO & VISIBILIDADE</text>
-          <circle cx="330" cy="110" r="35" fill="none" stroke="#B8F483" stroke-width="4" stroke-dasharray="4 4"/>
-          <text x="330" y="116" text-anchor="middle" font-size="22" fill="#B8F483">∅</text>
+          <rect width="400" height="220" fill="#111"/>
+          <text x="40" y="90" font-family="sans-serif" font-size="28" font-weight="bold" fill="#B8F483">AGÊNERO</text>
+          <text x="40" y="125" font-family="sans-serif" font-size="15" fill="#fff">Identidade além do binarismo.</text>
         </svg>
       </div>
-
       <div class="banner-card">
         <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
           <rect width="400" height="220" fill="#7c3aed"/>
-          <circle cx="350" cy="50" r="100" fill="#06b6d4" opacity="0.4"/>
-          <circle cx="50" cy="180" r="120" fill="#ff6bcd" opacity="0.3"/>
-          <text x="200" y="95" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="white">ESPAÇO SEGURO</text>
-          <text x="200" y="130" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#4BFF9D" font-weight="600">Respeito · Empatia · União</text>
-          <rect x="110" y="155" width="180" height="30" rx="15" fill="rgba(0,0,0,0.3)"/>
-          <text x="200" y="174" text-anchor="middle" font-family="sans-serif" font-size="11" fill="white" font-weight="bold" letter-spacing="1">FAÇA PARTE DA REDE</text>
+          <text x="200" y="110" text-anchor="middle" font-family="sans-serif" font-size="24" fill="white" font-weight="bold">ESPAÇO SEGURO</text>
         </svg>
       </div>
     </div>
@@ -757,7 +449,6 @@
   <div class="container">
     <span class="section-tag">Dicionário de Identidades</span>
     <h2 class="section-title">Entendendo a Sigla</h2>
-    <p class="section-desc">A diversidade humana é vasta. Conheça o significado de cada letra e amplie o seu conhecimento sobre orientações e identidades.</p>
     <div class="sigla-grid" id="siglaContainer"></div>
   </div>
 </section>
@@ -766,17 +457,13 @@
   <div class="container">
     <span class="section-tag" style="color:#B8F483">Identidade em Destaque</span>
     <h2 class="section-title">Pessoas Agênero</h2>
-    <p class="section-desc">Compreender as vivências de quem não se identifica com nenhum género é essencial para construir empatia e inclusão.</p>
-
     <div class="agender-hero">
       <div>
-        <h3 style="font-size:1.5rem; margin-bottom:1rem; font-family:'Playfair Display',serif;">O que significa ser Agênero?</h3>
-        <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.7; margin-bottom:1rem;">
-          Uma pessoa agênero é alguém que possui uma identidade não-binária na qual se percebe sem um género ou com uma total ausência dele. Não se trata de uma indefinição, mas sim de uma identificação autêntica de neutralidade em relação ao espectro de géneros tradicional.
-        </p>
+        <h3 style="font-size:1.5rem; margin-bottom:1rem; font-family:serif;">O que significa ser Agênero?</h3>
+        <p style="color:rgba(255,255,255,0.7); line-height:1.7;">Uma pessoa agênero é alguém que possui uma identidade não-binária na qual se percebe sem um gênero ou com uma total ausência dele.</p>
         <div class="curiosidade-box">
           <h4>Você Sabia?</h4>
-          <p>A bandeira agênero possui listras pretas e brancas que representam a ausência completa de género, listras cinzentas que ilustram a transição e a semi-ausência, e uma listra verde central que simboliza o género não-binário (já que o verde é a cor oposta ao roxo, mistura clássica de azul/rosa).</p>
+          <p>A listra verde central simboliza o gênero não-binário (já que o verde é a cor oposta ao roxo, mistura clássica de azul/rosa).</p>
         </div>
       </div>
       <div class="agender-flag-display">
@@ -789,15 +476,7 @@
         <div class="stripe" style="background:#000"></div>
       </div>
     </div>
-
-    <h3 style="font-size:1.3rem; margin-bottom:1rem; font-family:'Playfair Display',serif;">Personalidades e Figuras Públicas Inspiradoras</h3>
     <div class="agender-famous-grid" id="famousContainer"></div>
-
-    <div class="slogan-grid">
-      <span class="slogan-pill" style="border-color:#BABABA; color:#BABABA">Respeito Pronome Neutro</span>
-      <span class="slogan-pill" style="border-color:#B8F483; color:#B8F483">Existência Além do Binário</span>
-      <span class="slogan-pill" style="border-color:#fff; color:#fff">Visibilidade Agênero Hoje</span>
-    </div>
   </div>
 </section>
 
@@ -805,16 +484,13 @@
   <div class="container">
     <span class="section-tag">Mural de Vozes</span>
     <h2 class="section-title">Espaço da Comunidade</h2>
-    <p class="section-desc">Compartilhe pensamentos, mensagens de apoio, desabafos ou conteúdos informativos de forma livre.</p>
-
     <div class="new-post-box">
-      <textarea id="postInput" placeholder="Escreva algo inspirador ou partilhe conhecimento com a comunidade da Etec..."></textarea>
+      <textarea id="postInput" placeholder="Escreva algo inspirador ou partilhe conhecimento..."></textarea>
       <div class="post-footer">
-        <div style="font-size:0.8rem; color:rgba(255,255,255,0.4)">Postagem Anónima Protegida</div>
-        <button class="btn-primary" style="padding:0.5rem 1.5rem; font-size:0.85rem;" onclick="addPost()">Publicar no Mural</button>
+        <span style="font-size:0.8rem; color:rgba(255,255,255,0.4)">Postagem Anônima</span>
+        <button class="btn-primary" style="padding:0.5rem 1.5rem; font-size:0.85rem;" onclick="addPost()">Publicar</button>
       </div>
     </div>
-
     <div class="posts-grid" id="postsContainer"></div>
   </div>
 </section>
@@ -823,7 +499,6 @@
   <div class="container">
     <span class="section-tag">Agenda Coletiva</span>
     <h2 class="section-title">Próximos Eventos</h2>
-    <p class="section-desc">Rodas de conversa, palestras, manifestações e celebrações organizadas por alunos e professores.</p>
     <div class="events-grid" id="eventsContainer"></div>
   </div>
 </section>
@@ -832,82 +507,155 @@
   <div class="container">
     <span class="section-tag">Seu Painel</span>
     <h2 class="section-title">Perfil de Diversidade</h2>
-    <p class="section-desc">Personalize a sua presença digitando as suas preferências e acompanhe o seu engajamento.</p>
+    <p class="section-desc">Configure sua ficha de orgulho para customizar sua identidade visual na rede interna.</p>
 
     <div class="profile-form">
       <div class="profile-sidebar">
         <div class="profile-card-preview">
           <div class="profile-avatar-upload">
-            <span>👤</span>
-            <input type="file" id="avatarFile">
+            <span id="previewAvatar">👤</span>
+            <input type="file" id="avatarFile" onchange="handleAvatarChange(this)">
           </div>
           <h3 class="profile-name-preview" id="previewName">Estudante Orgulho</h3>
-          <p class="profile-bio-preview" id="previewBio">Explorador cultural focado em criar um ambiente educacional mais inclusivo para todos.</p>
+          <div class="profile-pronouns-preview" id="previewPronouns">Ela/Dela</div>
+          
           <div class="identity-tags" id="profileTags">
-            <span class="identity-tag">Aliado/a</span>
-            <span class="identity-tag">Estudante Etec</span>
+            <span class="identity-tag" id="previewVinculo">Estudante Etec</span>
+            <span class="identity-tag" id="previewGenero" style="background:rgba(184,244,131,0.1); border-color:rgba(184,244,131,0.3); color:#B8F483;">Agênero</span>
+            <span class="identity-tag" id="previewOrientacao">Assexual</span>
           </div>
-          <div class="divider"></div>
+
+          <div class="divider" style="margin:1.2rem 0;"></div>
+          
+          <p class="profile-bio-preview" id="previewBio">Focado em construir ambientes acolhedores na instituição através do respeito recíproco.</p>
+          
           <div style="text-align:left;">
-            <div style="display:flex; justify-content:space-between; font-size:0.78rem; font-weight:600;">
-              <span>Nível de Consciência</span>
-              <span style="color:#C44BFF">Nv. 3</span>
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:600;">
+              <span>Nível de Engajamento</span>
+              <span style="color:#C44BFF" id="previewLevel">Nv. 3</span>
             </div>
-            <div class="level-bar"><div class="level-fill" style="width:65%"></div></div>
+            <div class="level-bar"><div class="level-fill" id="previewLevelBar" style="width:65%"></div></div>
           </div>
-          <div class="badges-row">
-            <span class="badge" title="Participou de 3 ou mais rodas">⭐ Multi-Rodas</span>
-            <span class="badge" style="background:rgba(6,182,212,0.15); border-color:rgba(6,182,212,0.3); color:#06b6d4;" title="Leitor assíduo do dicionário">📚 Info-Expert</span>
+          
+          <div class="badges-row" id="previewBadges">
+            <span class="badge">⭐ Multi-Rodas</span>
+            <span class="badge" style="background:rgba(6,182,212,0.12); border-color:rgba(6,182,212,0.25); color:#06b6d4;">📚 Info-Expert</span>
           </div>
         </div>
       </div>
 
       <div>
         <div class="tab-nav">
-          <button class="tab-btn active" onclick="switchTab('edit')">Editar Dados</button>
-          <button class="tab-btn" onclick="switchTab('preferences')">Preferências Temáticas</button>
+          <button class="tab-btn active" id="btn-edit" onclick="switchTab('edit')">1. Dados de Identidade</button>
+          <button class="tab-btn" id="btn-preferences" onclick="switchTab('preferences')">2. Interesses & Conquistas</button>
         </div>
 
         <div id="tab-edit" class="tab-panel active">
           <div class="form-grid">
             <div class="form-group">
-              <label>Nome / Nome Social</label>
+              <label>Nome Social / Apelido</label>
               <input type="text" id="inputName" value="Estudante Orgulho" oninput="updateProfilePreview()">
             </div>
+            
             <div class="form-group">
-              <label>Pronomes</label>
-              <input type="text" id="inputPronouns" value="Ela/Dela ou Ele/Dele" placeholder="Ex: Elu/Delu, Ela/Dela">
+              <label>Vínculo Institucional</label>
+              <select id="inputVinculo" onchange="updateProfilePreview()">
+                <option value="Estudante Etec">Estudante Matriculado/a</option>
+                <option value="Professor/a Etec">Corpo Docente (Professor)</option>
+                <option value="Funcionário/a">Equipe Administrativa / Apoio</option>
+                <option value="Egresso Etec">Ex-Aluno (Egresso)</option>
+                <option value="Comunidade">Comunidade Externa / Visitante</option>
+              </select>
             </div>
+
+            <div class="form-group">
+              <label>Pronomes de Tratamento</label>
+              <select id="inputPronounSelect" onchange="toggleCustomPronoun()">
+                <option value="Ela/Dela">Ela / Dela</option>
+                <option value="Ele/Dele">Ele / Dele</option>
+                <option value="Elu/Delu">Elu / Delu (Neutro)</option>
+                <option value="Ela/Elu">Ela / Elu (Misto)</option>
+                <option value="Ele/Elu">Ele / Elu (Misto)</option>
+                <option value="custom">Outros / Personalizado...</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="customPronounBox" style="display:none;">
+              <label>Digite seus pronomes</label>
+              <input type="text" id="inputPronounsCustom" placeholder="Ex: Per/Pers ou Não utilizo" oninput="updateProfilePreview()">
+            </div>
+
+            <div class="form-group">
+              <label>Identidade / Gênero</label>
+              <select id="inputGenero" onchange="updateProfilePreview()">
+                <option value="Cisgênero">Cisgênero</option>
+                <option value="Agênero" selected>Agênero</option>
+                <option value="Transgênero">Transgênero</option>
+                <option value="Não-Binário">Não-Binário</option>
+                <option value="Gênero Fluido">Gênero Fluido</option>
+                <option value="Queer">Queer</option>
+                <option value="Prefiro não responder">Prefiro não responder</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Orientação Afetiva / Sexual</label>
+              <select id="inputOrientacao" onchange="updateProfilePreview()">
+                <option value="Heterossexual">Heterossexual</option>
+                <option value="Lésbica">Lésbica</option>
+                <option value="Gay">Gay</option>
+                <option value="Bissexual">Bissexual</option>
+                <option value="Pansexual">Pansexual</option>
+                <option value="Assexual" selected>Assexual</option>
+                <option value="Aromântico">Aromântico</option>
+              </select>
+            </div>
+
             <div class="form-group full">
-              <label>Minha Biografia Curta</label>
-              <textarea id="inputBio" oninput="updateProfilePreview()">Explorador cultural focado em criar um ambiente educacional mais inclusivo para todos.</textarea>
+              <label>Biografia do Painel</label>
+              <textarea id="inputBio" oninput="updateProfilePreview()">Focado em construir ambientes acolhedores na instituição através do respeito recíproco.</textarea>
             </div>
           </div>
-          <button class="btn-primary" style="margin-top:1rem; padding:0.7rem 2rem; font-size:0.9rem;" onclick="saveProfileData()">Salvar Alterações</button>
+          <button class="btn-primary" style="margin-top:1rem; padding:0.7rem 2rem; font-size:0.9rem;" onclick="saveProfileData()">Confirmar Identidade</button>
         </div>
 
         <div id="tab-preferences" class="tab-panel">
-          <p style="font-size:0.88rem; color:rgba(255,255,255,0.6); margin-bottom:1.5rem;">Escolha abaixo quais temas ou identidades gostaria de focar na navegação. Isso alterará dinamicamente o visual de fundo do site para refletir o orgulho dessa identidade.</p>
           <div class="form-group">
-            <label>Selecione um Tema Visual de Orgulho</label>
+            <label>Definir Bandeira de Orgulho do Topo do Site</label>
             <select id="themeSelector" onchange="changeTheme(this.value)">
-              <option value="default">Padrão Escuro Espacial</option>
-              <option value="rainbow">Arco-Íris Completo (LGBTQIAPN+)</option>
-              <option value="agender">Orgulho Agênero (Cinza, Verde & Preto)</option>
+              <option value="default">Padrão Espacial Noturno</option>
+              <option value="rainbow">Arco-Íris (LGBTQIAPN+)</option>
+              <option value="agender" selected>Orgulho Agênero (Verde, Cinza & Preto)</option>
               <option value="trans">Orgulho Trans (Azul, Rosa & Branco)</option>
               <option value="bi">Orgulho Bissexual (Rosa, Roxo & Azul)</option>
             </select>
           </div>
+          
           <div class="divider"></div>
-          <label style="display:block; font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.6); margin-bottom:0.8rem;">Suas Tags de Interesse Comunitário</label>
+          
+          <label style="display:block; font-size:0.85rem; font-weight:600; color:rgba(255,255,255,0.7); margin-bottom:0.5rem;">Áreas de Interesse Educacional</label>
           <div id="interestsContainer"></div>
-          <div style="margin-top: 1.5rem;">
-            <label style="display:block; font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.6); margin-bottom:0.8rem;">Minha Personalidade de Ação</label>
-            <div id="personalityContainer"></div>
-          </div>
-          <div style="margin-top: 1.5rem;">
-            <label style="display:block; font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.6); margin-bottom:0.8rem;">Tipos de Evento Preferidos</label>
-            <div id="eventTypesContainer"></div>
+          
+          <div style="margin-top:1.5rem;">
+            <label style="display:block; font-size:0.85rem; font-weight:600; color:rgba(255,255,255,0.7); margin-bottom:0.5rem;">Seu Histórico / Conquistas Desbloqueadas</label>
+            <div id="badgesSelectContainer" style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-top:0.5rem;">
+              <div class="ticket-type selected" id="b1" onclick="toggleBadgeItem('b1', '⭐ Multi-Rodas')">
+                <div class="ticket-type-name">⭐ Multi-Rodas</div>
+                <div class="ticket-type-desc">Participou de mais de 3 palestras de debate</div>
+              </div>
+              <div class="ticket-type selected" id="b2" onclick="toggleBadgeItem('b2', '📚 Info-Expert')">
+                <div class="ticket-type-name">📚 Info-Expert</div>
+                <div class="ticket-type-desc">Leu todas as definições da sigla</div>
+              </div>
+              <div class="ticket-type" id="b3" onclick="toggleBadgeItem('b3', '📣 Ativista')">
+                <div class="ticket-type-name">📣 Ativista</div>
+                <div class="ticket-type-desc">Publicou um panfleto ou conteúdo comunitário</div>
+              </div>
+              <div class="ticket-type" id="b4" onclick="toggleBadgeItem('b4', '🤝 Aliado Fiel')">
+                <div class="ticket-type-name">🤝 Aliado Fiel</div>
+                <div class="ticket-type-desc">Engajado no combate ao preconceito</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -920,62 +668,12 @@
     <button class="modal-close" onclick="closeCreateEvent()">×</button>
     <h3 class="modal-title">Propagar Nova Ação Comunitária</h3>
     <div class="form-grid">
-      <div class="form-group full">
-        <label>Nome do Evento / Palestra / Roda</label>
-        <input type="text" id="evTitle" placeholder="Ex: Roda de Conversa Interseccional sobre Pronomes Neutros">
-      </div>
-      <div class="form-group">
-        <label>Data da Atividade</label>
-        <input type="date" id="evDate">
-      </div>
-      <div class="form-group">
-        <label>Horário de Início</label>
-        <input type="time" id="evTime">
-      </div>
-      <div class="form-group">
-        <label>Local / Sala da Etec (ou Link)</label>
-        <input type="text" id="evLoc" placeholder="Ex: Auditório Principal / Sala 12B">
-      </div>
-      <div class="form-group">
-        <label>Organizador / Coletivo Responsável</label>
-        <input type="text" id="evOrg" placeholder="Ex: Grêmio Estudantil / Prof. Carlos">
-      </div>
-      <div class="form-group full">
-        <label>Descrição Completa do Evento</label>
-        <textarea id="evDesc" placeholder="Explique os objetivos do evento, cronograma e palestrantes convidados..."></textarea>
-      </div>
-      <div class="form-section-title">Modalidade de Acesso</div>
-      <div class="form-group full">
-        <div class="ticket-types">
-          <div class="ticket-type selected" id="t1" onclick="selectTicket('free')">
-            <div class="ticket-type-name">Gratuito (Livre)</div>
-            <div class="ticket-type-desc">Entrada franca para toda a escola</div>
-          </div>
-          <div class="ticket-type" id="t2" onclick="selectTicket('paid')">
-            <div class="ticket-type-name">Contribuição</div>
-            <div class="ticket-type-desc">Arrecadação de alimentos/fundos</div>
-          </div>
-          <div class="ticket-type" id="t3" onclick="selectTicket('internal')">
-            <div class="ticket-type-name">Restrito</div>
-            <div class="ticket-type-desc">Apenas turmas específicas</div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Vagas Totais Disponíveis</label>
-        <input type="number" id="evSpots" value="40" placeholder="Deixe vazio para ilimitado">
-      </div>
-      <div class="form-group">
-        <label>Mascote Promotor Indicado</label>
-        <select id="evMascot">
-          <option value="🌈">Arco (Mascote Geral)</option>
-          <option value="∅">Neo (Mascote Neutralidade/Agênero)</option>
-        </select>
-      </div>
+      <div class="form-group full"><label>Nome do Evento</label><input type="text" id="evTitle" placeholder="Ex: Debate Aberto"></div>
+      <div class="form-group"><label>Data</label><input type="date" id="evDate"></div>
+      <div class="form-group"><label>Local</label><input type="text" id="evLoc" placeholder="Ex: Auditório"></div>
     </div>
     <div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1.5rem;">
-      <button class="btn-secondary" style="padding:0.6rem 1.5rem; font-size:0.88rem;" onclick="closeCreateEvent()">Cancelar</button>
-      <button class="btn-primary" style="padding:0.6rem 2rem; font-size:0.88rem;" onclick="submitEventForm()">Publicar Evento</button>
+      <button class="btn-primary" onclick="submitEventForm()">Publicar Evento</button>
     </div>
   </div>
 </div>
@@ -983,85 +681,67 @@
 <footer>
   <div class="container">
     <div class="footer-rainbow"></div>
-    <div style="margin-bottom:1.5rem;">
-      <span class="qr-placeholder"></span>
-      <p style="margin-top:0.5rem; font-size:0.75rem; color:rgba(255,255,255,0.4)">Acesse pelo smartphone para interagir em tempo real no campus.</p>
-    </div>
-    <p>© 2025 PrideSpace Etec. Desenvolvido para fomento da Diversidade e Direitos Humanos Universais.</p>
+    <span class="qr-placeholder"></span>
+    <p>© 2025 PrideSpace Etec. Respeito e Diversidade nos Direitos Humanos.</p>
   </div>
 </footer>
 
 <script>
-// Dados Iniciais da Sigla
 const siglaData = [
-  { l: "L", name: "Lésbicas", desc: "Mulheres (cis ou trans) que se sentem atraídas afetiva e/ou sexualmente por outras mulheres.", color: "#FF4500" },
-  { l: "G", name: "Gays", desc: "Homens (cis ou trans) que se sentem atraídos afetiva e/ou sexualmente por outros homens.", color: "#008026" },
-  { l: "B", name: "Bissexuais", desc: "Pessoas que se sentem atraídas por mais de um género (seja o masculino, feminino ou identidades não-binárias).", color: "#D60270" },
-  { l: "T", name: "Transgêneros", desc: "Indivíduos cuja identidade de género difere do género ou sexo biológico que lhes foi atribuído à nascença.", color: "#55CDFC" },
-  { l: "Q", name: "Queer", desc: "Pessoas que transitam entre géneros ou cujas orientações não se rotulam nos padrões normativos tradicionais.", color: "#750787" },
-  { l: "I", name: "Intersexo", desc: "Pessoas que nascem com características biológicas, anatómicas ou genéticas que não se encaixam na definição clássica de masculino ou feminino.", color: "#FFED00" },
-  { l: "A", name: "Assexuais", desc: "Pessoas que vivenciam pouca ou nenhuma atração sexual por outras pessoas, priorizando conexões afetivas.", color: "#000" },
-  { l: "P", name: "Pansexuais", desc: "Pessoas que desenvolvem atração física, amorosa e afetiva por outras pessoas, independentemente de sua identidade de género.", color: "#FF6BCD" },
-  { l: "N", name: "Não-Binárias", desc: "Termo guarda-chuva para identidades que não são puramente masculinas ou femininas, incluindo agêneros, bigêneros e fluidos.", color: "#4BFF9D" },
-  { l: "+", name: "Mais", desc: "Simboliza todas as outras infinitas expressões de identidade de género e orientação afetiva que compõem a diversidade humana.", color: "#fff" }
+  { l: "L", name: "Lésbicas", desc: "Mulheres que se sentem atraídas afetiva/sexualmente por mulheres.", color: "#FF4500" },
+  { l: "G", name: "Gays", desc: "Homens que se sentem atraídos afetiva/sexualmente por homens.", color: "#008026" },
+  { l: "B", name: "Bissexuais", desc: "Atração afetiva ou sexual por mais de um gênero.", color: "#D60270" },
+  { l: "T", name: "Transgêneros", desc: "Indivíduos cuja identidade difere do sexo biológico de nascimento.", color: "#55CDFC" },
+  { l: "Q", name: "Queer", desc: "Pessoas que não se rotulam nos padrões normativos de gênero/orientação.", color: "#750787" },
+  { l: "A", name: "Assexuais", desc: "Pessoas que vivenciam pouca ou nenhuma atração sexual por outrem.", color: "#fff" },
+  { l: "+", name: "Mais", desc: "Todas as outras infinitas variações de orgulho e amor.", color: "#FF6BCD" }
 ];
 
-// Dados Iniciais de Personalidades Agênero
 const famousData = [
   { name: "Angel Haze", role: "Rapper e Poeta", avatar: "🎤" },
-  { name: "Bambie Thug", role: "Artista e Cantor/a", avatar: "🔮" },
-  { name: "Shamir", role: "Cantor/a e Compositor/a", avatar: "🎸" },
-  { name: "Tyler Ford", role: "Escritor/a e Ativista", avatar: "✍️" }
+  { name: "Bambie Thug", role: "Artista Musical", avatar: "🔮" }
 ];
 
-// Posts Iniciais da Comunidade
 let posts = [
-  { id: 1, user: "Anónimo", badge: "Aluno de TI", text: "Muito feliz por ver a nossa Etec criando um espaço desses! No ano passado ainda sentia muito medo de falar sobre quem eu sou.", likes: 14, liked: false },
-  { id: 2, user: "Voz Aliada", badge: "Professora de Humanas", text: "Educação inclusiva transforma vidas. Parabéns a todos os estudantes envolvidos na construção desse site maravilhoso.", likes: 25, liked: false }
+  { id: 1, user: "Anônimo", badge: "Aluno de TI", text: "Incrível ver a Etec promovendo esse espaço de debate estruturado!", likes: 12, liked: false }
 ];
 
-// Eventos Iniciais da Agenda
 let events = [
-  { id: 1, title: "Mesa Redonda: Vivências Trans e Não-Binárias nas Escolas", date: "2025-06-12", loc: "Auditório Bloco A", priceType: "free", priceText: "Gratuito", spots: "45 vagas restantes", icon: "🌈" },
-  { id: 2, title: "Cine-Debate: O que significa Neutralidade de Gênero?", date: "2025-06-19", loc: "Sala de Audiovisual (Sala 4)", priceType: "paid", priceText: "Arrecadação de 1Kg Alimento", spots: "20 vagas restantes", icon: "∅" }
+  { id: 1, title: "Mesa Redonda: Vivências Não-Binárias e Espaço Escolar", date: "2025-06-12", loc: "Auditório Bloco A", priceType: "free", priceText: "Gratuito", spots: "40 vagas", icon: "🌈" }
 ];
 
-let selectedTicketType = 'free';
+let activeBadges = ["⭐ Multi-Rodas", "📚 Info-Expert"];
 
-// Inicializador Global
 window.onload = function() {
   renderSigla();
   renderFamous();
   renderPosts();
   renderEvents();
-  initTags();
-  
-  // Atualiza barra de progresso no scroll
+  initInterests();
+  updateProfilePreview();
+
   window.onscroll = function() {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("progress-bar").style.width = scrolled + "%";
+    document.getElementById("progress-bar").style.width = ((winScroll / height) * 100) + "%";
   };
 };
 
-function toggleMenu() {
-  document.getElementById("navlinks").classList.toggle("open");
-}
+function toggleMenu() { document.getElementById("navlinks").classList.toggle("open"); }
+function openCreateEvent() { document.getElementById("createEventModal").classList.add("open"); }
+function closeCreateEvent() { document.getElementById("createEventModal").classList.remove("open"); }
+function closeCreateEventOutside(e) { if(e.target.id === "createEventModal") closeCreateEvent(); }
 
 function renderSigla() {
   const container = document.getElementById("siglaContainer");
   container.innerHTML = "";
   siglaData.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "sigla-card";
-    card.style.borderColor = `rgba(${parseInt(item.color.slice(1,3),16) || 255}, ${parseInt(item.color.slice(3,5),16) || 255}, ${parseInt(item.color.slice(5,7),16) || 255}, 0.15)`;
-    card.innerHTML = `
-      <div class="sigla-letter" style="color:${item.color}">${item.l}</div>
-      <div class="sigla-name">${item.name}</div>
-      <div class="sigla-desc">${item.desc}</div>
-    `;
-    container.appendChild(card);
+    container.innerHTML += `
+      <div class="sigla-card">
+        <div class="sigla-letter" style="color:${item.color}">${item.l}</div>
+        <div class="sigla-name">${item.name}</div>
+        <div class="sigla-desc">${item.desc}</div>
+      </div>`;
   });
 }
 
@@ -1069,14 +749,12 @@ function renderFamous() {
   const container = document.getElementById("famousContainer");
   container.innerHTML = "";
   famousData.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "famous-card";
-    card.innerHTML = `
-      <div class="famous-avatar">${p.avatar}</div>
-      <div class="famous-name">${p.name}</div>
-      <div class="famous-role">${p.role}</div>
-    `;
-    container.appendChild(card);
+    container.innerHTML += `
+      <div class="famous-card">
+        <div class="famous-avatar">${p.avatar}</div>
+        <div class="famous-name">${p.name}</div>
+        <div class="famous-role">${p.role}</div>
+      </div>`;
   });
 }
 
@@ -1084,188 +762,158 @@ function renderPosts() {
   const container = document.getElementById("postsContainer");
   container.innerHTML = "";
   posts.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "post-card";
-    card.innerHTML = `
-      <div class="post-header">
-        <div class="post-avatar" style="background:${p.liked ? 'var(--accent)' : 'rgba(255,255,255,0.06)'}; color:#fff">👥</div>
-        <div>
-          <div class="post-user">${p.user}</div>
-          <div class="post-badge">${p.badge}</div>
+    container.innerHTML += `
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-avatar" style="background:rgba(255,255,255,0.06)">👥</div>
+          <div><div class="post-user">${p.user}</div><div class="post-badge">${p.badge}</div></div>
         </div>
-      </div>
-      <div class="post-text">${p.text}</div>
-      <div class="post-actions">
-        <button class="post-action" style="color:${p.liked ? 'var(--accent)' : ''}" onclick="likePost(${p.id})">💖 <span>${p.likes}</span></button>
-      </div>
-    `;
-    container.appendChild(card);
+        <div class="post-text">${p.text}</div>
+      </div>`;
   });
 }
 
 function addPost() {
   const txt = document.getElementById("postInput").value.trim();
-  if(!txt) return showNotification("Escreva algo antes de submeter!");
-  posts.unshift({
-    id: Date.now(),
-    user: "Membro Anónimo",
-    badge: "Estudante Etec",
-    text: txt,
-    likes: 0,
-    liked: false
-  });
+  if(!txt) return;
+  posts.unshift({ id: Date.now(), user: "Anônimo", badge: "Membro Etec", text: txt });
   document.getElementById("postInput").value = "";
   renderPosts();
-  showNotification("Seu comentário foi postado de forma anónima!");
-}
-
-function likePost(id) {
-  posts = posts.map(p => {
-    if(p.id === id) {
-      p.liked = !p.liked;
-      p.likes += p.liked ? 1 : -1;
-    }
-    return p;
-  });
-  renderPosts();
+  showNotification("Postado com sucesso!");
 }
 
 function renderEvents() {
   const container = document.getElementById("eventsContainer");
   container.innerHTML = "";
   events.forEach(e => {
-    const card = document.createElement("div");
-    card.className = "event-card";
-    card.innerHTML = `
-      <div class="event-banner" style="background:${e.priceType === 'free' ? 'rgba(75,170,255,0.05)' : 'rgba(196,75,255,0.05)'}">
-        ${e.icon}
-        <span class="event-banner-tag">${e.priceType.toUpperCase()}</span>
-      </div>
-      <div class="event-body">
-        <div class="event-date">📅 ${e.date}</div>
-        <div class="event-title">${e.title}</div>
-        <div class="event-loc">📍 ${e.loc}</div>
-        <div class="event-footer">
-          <span class="event-price ${e.priceType === 'free' ? 'price-free' : 'price-paid'}">${e.priceText}</span>
-          <span class="event-spots">${e.spots}</span>
+    container.innerHTML += `
+      <div class="event-card">
+        <div class="event-banner">${e.icon}</div>
+        <div class="event-body">
+          <div class="event-date">📅 ${e.date}</div>
+          <div class="event-title">${e.title}</div>
+          <div class="event-loc">📍 ${e.loc}</div>
         </div>
-      </div>
-    `;
-    container.appendChild(card);
+      </div>`;
   });
-}
-
-// Controle de Modais de Evento
-function openCreateEvent() {
-  document.getElementById("createEventModal").classList.add("open");
-}
-function closeCreateEvent() {
-  document.getElementById("createEventModal").classList.remove("open");
-}
-function closeCreateEventOutside(e) {
-  if(e.target.id === "createEventModal") closeCreateEvent();
-}
-
-function selectTicket(type) {
-  selectedTicketType = type;
-  document.querySelectorAll('.ticket-type').forEach(el => el.classList.remove('selected'));
-  if(type === 'free') document.getElementById('t1').classList.add('selected');
-  if(type === 'paid') document.getElementById('t2').classList.add('selected');
-  if(type === 'internal') document.getElementById('t3').classList.add('selected');
 }
 
 function submitEventForm() {
-  const title = document.getElementById("evTitle").value.trim();
+  const title = document.getElementById("evTitle").value;
   const date = document.getElementById("evDate").value;
-  const loc = document.getElementById("evLoc").value.trim();
-  const spots = document.getElementById("evSpots").value || "Ilimitadas";
-  const icon = document.getElementById("evMascot").value;
-
-  if(!title || !date || !loc) return showNotification("Por favor preencha Nome, Data e Local!");
-
-  let priceText = "Gratuito";
-  if(selectedTicketType === 'paid') priceText = "Contribuição Solidária";
-  if(selectedTicketType === 'internal') priceText = "Restrito Interno";
-
-  events.unshift({
-    id: Date.now(),
-    title, date, loc, icon,
-    priceType: selectedTicketType,
-    priceText,
-    spots: spots + " vagas disponíveis"
-  });
-
-  renderEvents();
-  closeCreateEvent();
-  showNotification("Seu evento escolar foi listado com sucesso!");
+  const loc = document.getElementById("evLoc").value;
+  if(!title || !date || !loc) return;
+  events.unshift({ id: Date.now(), title, date, loc, icon: "🌈", priceType:"free", priceText:"Livre" });
+  renderEvents(); closeCreateEvent();
+  showNotification("Evento publicado!");
 }
 
-// Controle de Temas e Perfil
+/* ========== LÓGICA DE ABAS E PREVIEW DO PERFIL ========== */
 function switchTab(tab) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  
-  event.target.classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
   document.getElementById('tab-' + tab).classList.add('active');
 }
 
+function toggleCustomPronoun() {
+  const select = document.getElementById("inputPronounSelect").value;
+  const customBox = document.getElementById("customPronounBox");
+  customBox.style.display = (select === "custom") ? "block" : "none";
+  updateProfilePreview();
+}
+
 function updateProfilePreview() {
+  // Nome
   document.getElementById("previewName").textContent = document.getElementById("inputName").value || "Estudante";
-  document.getElementById("previewBio").textContent = document.getElementById("inputBio").value || "Sem biografia curta inserida.";
-}
-
-function saveProfileData() {
-  showNotification("Dados de perfil social atualizados!");
-}
-
-function changeTheme(theme) {
-  document.body.className = ""; // limpa temas anteriores
-  if(theme !== 'default') {
-    document.body.classList.add('theme-' + theme);
+  
+  // Pronomes
+  const pronounSelect = document.getElementById("inputPronounSelect").value;
+  if (pronounSelect === "custom") {
+    document.getElementById("previewPronouns").textContent = document.getElementById("inputPronounsCustom").value || "Não informado";
+  } else {
+    document.getElementById("previewPronouns").textContent = pronounSelect;
   }
-  showNotification(`Tema visual alterado para: Orgulho ${theme.toUpperCase()}`);
+
+  // Vínculo, Gênero e Orientação
+  document.getElementById("previewVinculo").textContent = document.getElementById("inputVinculo").value;
+  document.getElementById("previewGenero").textContent = document.getElementById("inputGenero").value;
+  document.getElementById("previewOrientacao").textContent = document.getElementById("inputOrientacao").value;
+  
+  // Biografia
+  document.getElementById("previewBio").textContent = document.getElementById("inputBio").value || "Sem biografia.";
+  
+  // Renderizar Conquistas Ativas no Cartão
+  renderPreviewBadges();
 }
 
-function showNotification(msg) {
-  const n = document.getElementById("notif");
-  n.textContent = msg;
-  n.classList.add("show");
-  setTimeout(() => n.classList.remove("show"), 4000);
+function toggleBadgeItem(elementId, badgeName) {
+  const el = document.getElementById(elementId);
+  el.classList.toggle("selected");
+  
+  if (el.classList.contains("selected")) {
+    if (!activeBadges.includes(badgeName)) activeBadges.push(badgeName);
+  } else {
+    activeBadges = activeBadges.filter(b => b !== badgeName);
+  }
+  
+  // Atualiza dinamicamente a barra de progresso / Nível com base nas insígnias ganhas
+  const totalBadges = activeBadges.length;
+  const levelFill = document.getElementById("previewLevelBar");
+  const levelText = document.getElementById("previewLevel");
+  
+  if(totalBadges <= 1) { levelText.textContent = "Nv. 1"; levelFill.style.width = "25%"; }
+  else if(totalBadges === 2) { levelText.textContent = "Nv. 3"; levelFill.style.width = "65%"; }
+  else if(totalBadges === 3) { levelText.textContent = "Nv. 4"; levelFill.style.width = "85%"; }
+  else { levelText.textContent = "Nv. Max"; levelFill.style.width = "100%"; }
+
+  updateProfilePreview();
 }
 
-function initTags() {
-  const interests = ["Direitos LGBTQIAPN+", "História do Movimento", "Pronomes Neutros", "Interseccionalidade", "Políticas na Etec"];
-  const personalities = ["Ativista Prático", "Educador/a Teórico/a", "Ouvinte Empático", "Criador de Conteúdo"];
-  const eventTypes = ["Rodas de Conversa", "Palestras Formais", "Oficinas Artísticas", "Cine-Debates Escolares"];
+function renderPreviewBadges() {
+  const container = document.getElementById("previewBadges");
+  container.innerHTML = "";
+  activeBadges.forEach(badge => {
+    let style = "";
+    if (badge.includes("Expert")) style = "background:rgba(6,182,212,0.12); border-color:rgba(6,182,212,0.25); color:#06b6d4;";
+    if (badge.includes("Ativista")) style = "background:rgba(255,107,157,0.12); border-color:rgba(255,107,157,0.25); color:#ff6bcd;";
+    if (badge.includes("Aliado")) style = "background:rgba(75,170,255,0.12); border-color:rgba(75,170,255,0.25); color:#4baaff;";
+    
+    container.innerHTML += `<span class="badge" style="${style}">${badge}</span>`;
+  });
+}
 
+function handleAvatarChange(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('previewAvatar').innerHTML = `<img src="${e.target.result}" style="width:100%; height:100%; object-fit:cover;">`;
+    };
+    reader.readAsDataURL(input.files[0]);
+    showNotification("Foto carregada com sucesso!");
+  }
+}
+
+function initInterests() {
+  const interests = ["Direitos LGBTQIAPN+", "História do Movimento", "Linguagem Neutra", "Políticas Educacionais de Inclusão"];
   const c = document.getElementById('interestsContainer');
   interests.forEach(i => {
     const span = document.createElement('span');
     span.className = 'tag-chip';
     span.textContent = i;
-    span.style.cursor = 'pointer';
-    span.onclick = () => { span.classList.toggle('active'); span.style.background = span.classList.contains('active') ? 'rgba(196,75,255,0.2)' : ''; span.style.borderColor = span.classList.contains('active') ? 'rgba(196,75,255,0.5)' : ''; };
+    span.onclick = () => { span.classList.toggle('active'); };
     c.appendChild(span);
   });
-  const p = document.getElementById('personalityContainer');
-  personalities.forEach(i => {
-    const span = document.createElement('span');
-    span.className = 'tag-chip';
-    span.textContent = i;
-    span.style.cursor = 'pointer';
-    span.onclick = () => { span.classList.toggle('active'); span.style.background = span.classList.contains('active') ? 'rgba(196,75,255,0.2)' : ''; span.style.borderColor = span.classList.contains('active') ? 'rgba(196,75,255,0.5)' : ''; };
-    p.appendChild(span);
-  });
-  const et = document.getElementById('eventTypesContainer');
-  eventTypes.forEach(i => {
-    const span = document.createElement('span');
-    span.className = 'tag-chip';
-    span.textContent = i;
-    span.style.cursor = 'pointer';
-    span.onclick = () => { span.classList.toggle('active'); span.style.background = span.classList.contains('active') ? 'rgba(196,75,255,0.2)' : ''; span.style.borderColor = span.classList.contains('active') ? 'rgba(196,75,255,0.5)' : ''; };
-    et.appendChild(span);
-  });
 }
+
+function changeTheme(theme) {
+  document.body.className = "";
+  if(theme !== 'default') document.body.classList.add('theme-' + theme);
+  showNotification(`Tema alterado para: Orgulho ${theme.toUpperCase()}`);
+}
+
+function saveProfileData() { showNotification("Configurações salvas e aplicadas na conta local!"); }
+function showNotification(msg) { const n = document.getElementById("notif"); n.textContent = msg; n.classList.add("show"); setTimeout(() => n.classList.remove("show"), 4000); }
 </script>
 </body>
 </html>
