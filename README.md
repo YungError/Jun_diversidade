@@ -185,4 +185,4 @@ Este projeto é de código aberto e pode ser usado livremente para fins educacio
 
 **Criado com ❤️ para a comunidade LGBTQIAPN+ durante o Mês do Orgulho**
 
-Versão 1.0 | Maio/Junho 2024
+Versão 1.0 | Maio/Junho 2026
