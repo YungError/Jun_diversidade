@@ -621,7 +621,7 @@
   <div class="rainbow-stripe"></div>
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-badge">🌈 Etec — Mês da Diversidade · Junho 2025</div>
+    <div class="hero-badge">🌈 Etec — Mês da Diversidade · Junho 2026</div>
     <h1 class="hero-title">
       Seu espaço de<br>
       <span class="gradient-text">Orgulho & Conexão</span>
@@ -740,7 +740,7 @@
           <!-- Texto -->
           <text x="200" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="bold" fill="white">🏳️‍🌈 ORGULHO</text>
           <text x="200" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="rgba(255,255,255,0.85)">Mês da Diversidade</text>
-          <text x="200" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="rgba(255,255,255,0.5)" letter-spacing="3">JUNHO · ETEC · 2025</text>
+          <text x="200" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="rgba(255,255,255,0.5)" letter-spacing="3">JUNHO · ETEC · 2026</text>
           <!-- Estrelas deco -->
           <text x="20" y="40" font-size="20">✦</text>
           <text x="360" y="190" font-size="20">✦</text>
@@ -1195,34 +1195,40 @@
         </div>
 
         <!-- Privacidade -->
-        <div class="tab-panel" id="tab-privacy">
-          <div style="display:grid;gap:1rem;">
-            <div class="form-group">
-              <label>Visibilidade do Perfil</label>
-              <select>
-                <option>Público — visível a todos</option>
-                <option>Limitado — só comunidade</option>
-                <option>Privado — só amigos</option>
-              </select>
-            </div>
-            <div style="display:grid;gap:0.8rem;">
-              <label style="font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.6);">O que pode ser visível?</label>
-              <div class="privacy-toggle-row" onclick="togglePrivacy(this)" style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1rem;cursor:pointer;">
-                <span style="font-size:0.88rem;">📍 Localização</span>
-                <div class="toggle-dot" style="width:40px;height:22px;background:rgba(255,255,255,0.08);border-radius:11px;position:relative;transition:0.3s;"><div style="position:absolute;left:3px;top:3px;width:16px;height:16px;background:#888;border-radius:50%;transition:0.3s;"></div></div>
-              </div>
-              <div class="privacy-toggle-row" onclick="togglePrivacy(this)" style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1rem;cursor:pointer;">
-                <span style="font-size:0.88rem;">🎟️ Histórico de eventos</span>
-                <div class="toggle-dot" style="width:40px;height:22px;background:rgba(196,75,255,0.3);border-radius:11px;position:relative;transition:0.3s;"><div style="position:absolute;right:3px;top:3px;width:16px;height:16px;background:#C44BFF;border-radius:50%;transition:0.3s;"></div></div>
-              </div>
-              <div class="privacy-toggle-row" onclick="togglePrivacy(this)" style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1rem;cursor:pointer;">
-                <span style="font-size:0.88rem;">👥 Lista de conexões</span>
-                <div class="toggle-dot" style="width:40px;height:22px;background:rgba(196,75,255,0.3);border-radius:11px;position:relative;transition:0.3s;"><div style="position:absolute;right:3px;top:3px;width:16px;height:16px;background:#C44BFF;border-radius:50%;transition:0.3s;"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+<div class="tab-panel" id="tab-privacy">
+  <div style="display:grid;gap:1.2rem;">
+    <div class="form-group">
+      <label style="display:block;font-size:0.85rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.5rem;">Visibilidade do Perfil</label>
+      <select style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:#fff;padding:0.75rem 1rem;font-size:0.9rem;font-family:inherit;">
+        <option>Público — visível a todos</option>
+        <option>Limitado — só comunidade</option>
+        <option>Privado — só amigos</option>
+      </select>
+    </div>
+    
+    <div style="display:grid;gap:0.8rem;">
+      <label style="font-size:0.85rem;font-weight:600;color:rgba(255,255,255,0.7);">O que pode ser visível?</label>
+      
+      <!-- Toggle 1: Localização (desmarcado) -->
+      <div style="display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.2rem;">
+        <input type="checkbox" id="cb-local" style="width:22px;height:22px;cursor:pointer;accent-color:#C44BFF;">
+        <span style="font-size:0.9rem;">📍 Localização</span>
+      </div>
+      
+      <!-- Toggle 2: Histórico (marcado) -->
+      <div style="display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(196,75,255,0.3);border-radius:12px;padding:1rem 1.2rem;">
+        <input type="checkbox" id="cb-eventos" checked style="width:22px;height:22px;cursor:pointer;accent-color:#C44BFF;">
+        <span style="font-size:0.9rem;">🎟️ Histórico de eventos</span>
+      </div>
+      
+      <!-- Toggle 3: Conexões (marcado) -->
+      <div style="display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(196,75,255,0.3);border-radius:12px;padding:1rem 1.2rem;">
+        <input type="checkbox" id="cb-conexoes" checked style="width:22px;height:22px;cursor:pointer;accent-color:#C44BFF;">
+        <span style="font-size:0.9rem;">👥 Lista de conexões</span>
+      </div>
+    </div>
+  </div>
+</div>
         <div style="margin-top:2rem;display:flex;gap:1rem;">
           <button class="btn-primary" onclick="saveProfile()">Salvar Perfil ✨</button>
           <button class="btn-secondary" onclick="shareCard()">Compartilhar Cartão</button>
@@ -1328,7 +1334,7 @@
       </div>
       <div class="form-group">
         <label>Cupom de Desconto</label>
-        <input type="text" id="ev-coupon" placeholder="PRIDE2025">
+        <input type="text" id="ev-coupon" placeholder="PRIDE2026">
       </div>
 
       <div class="form-section-title">📜 Regras & Informações</div>
@@ -1370,7 +1376,7 @@
   <div class="container">
     <div class="footer-rainbow"></div>
     <div class="nav-logo" style="font-size:2rem;margin-bottom:1rem;">🏳️‍🌈 PrideSpace</div>
-    <p>Criado com 💜 para o Mês da Diversidade · Etec · Junho 2025</p>
+    <p>Criado com 💜 para o Mês da Diversidade · Etec · Junho 2026</p>
     <p style="margin-top:0.5rem;">Amor é amor. Identidade é legítima. Você pertence aqui.</p>
     <div style="margin-top:1.5rem;display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
       <span class="tag-chip">🌈 LGBT+</span>
@@ -1467,12 +1473,12 @@ function renderSigla() {
 
 // ======= EVENTS DATA =======
 let allEvents = [
-  { id:1, emoji:'🏳️‍🌈', title:'Parada do Orgulho Etec', date:'14 Jun 2025', time:'14h', local:'Praça Central, SP', type:'presencial', category:'festa', price:null, spots:500, color:'linear-gradient(135deg,#FF6B9D,#C44BFF)' },
-  { id:2, emoji:'📚', title:'Roda de Conversa: Identidades', date:'20 Jun 2025', time:'10h', local:'Zoom — Online', type:'online', category:'educativo', price:null, spots:100, color:'linear-gradient(135deg,#4B9AFF,#4BFF9D)' },
-  { id:3, emoji:'🎉', title:'Festa Pride — Noite das Cores', date:'28 Jun 2025', time:'21h', local:'Club Diverso, SP', type:'presencial', category:'festa', price:{inteiro:40,meia:20}, spots:300, color:'linear-gradient(135deg,#FF8C00,#FF0018)' },
-  { id:4, emoji:'🎨', title:'Expo Arte Queer', date:'5 Jul 2025', time:'13h', local:'Centro Cultural SP', type:'presencial', category:'educativo', price:null, spots:200, color:'linear-gradient(135deg,#C44BFF,#4BAAFF)' },
-  { id:5, emoji:'💻', title:'Workshop: Criação de Espaços Seguros Online', date:'12 Jul 2025', time:'15h', local:'Google Meet', type:'online', category:'educativo', price:null, spots:50, color:'linear-gradient(135deg,#4BFF9D,#4BAAFF)' },
-  { id:6, emoji:'🎭', title:'Teatro: Histórias Agênero', date:'19 Jul 2025', time:'19h', local:'Teatro Municipal, SP', type:'presencial', category:'educativo', price:{inteiro:30,meia:15}, spots:120, color:'linear-gradient(135deg,#888,#B8F483)' },
+  { id:1, emoji:'🏳️‍🌈', title:'Parada do Orgulho Etec', date:'14 Jun 2026', time:'14h', local:'Praça Central, SP', type:'presencial', category:'festa', price:null, spots:500, color:'linear-gradient(135deg,#FF6B9D,#C44BFF)' },
+  { id:2, emoji:'📚', title:'Roda de Conversa: Identidades', date:'20 Jun 2026', time:'10h', local:'Zoom — Online', type:'online', category:'educativo', price:null, spots:100, color:'linear-gradient(135deg,#4B9AFF,#4BFF9D)' },
+  { id:3, emoji:'🎉', title:'Festa Pride — Noite das Cores', date:'28 Jun 2026', time:'21h', local:'Club Diverso, SP', type:'presencial', category:'festa', price:{inteiro:40,meia:20}, spots:300, color:'linear-gradient(135deg,#FF8C00,#FF0018)' },
+  { id:4, emoji:'🎨', title:'Expo Arte Queer', date:'5 Jul 2026', time:'13h', local:'Centro Cultural SP', type:'presencial', category:'educativo', price:null, spots:200, color:'linear-gradient(135deg,#C44BFF,#4BAAFF)' },
+  { id:5, emoji:'💻', title:'Workshop: Criação de Espaços Seguros Online', date:'12 Jul 2026', time:'15h', local:'Google Meet', type:'online', category:'educativo', price:null, spots:50, color:'linear-gradient(135deg,#4BFF9D,#4BAAFF)' },
+  { id:6, emoji:'🎭', title:'Teatro: Histórias Agênero', date:'19 Jul 2026', time:'19h', local:'Teatro Municipal, SP', type:'presencial', category:'educativo', price:{inteiro:30,meia:15}, spots:120, color:'linear-gradient(135deg,#888,#B8F483)' },
 ];
 
 let selectedTicketType = 'gratuito';
