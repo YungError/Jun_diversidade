@@ -1,0 +1,194 @@
+# 📤 Guia Completo: Upload no GitHub
+
+Este guia te ajudará a fazer upload do seu projeto PrideHub no GitHub de forma simples e segura.
+
+## ✅ Pré-requisitos
+
+- Conta no GitHub (criar em https://github.com)
+- Git instalado no seu computador (download em https://git-scm.com)
+- O arquivo `index.html` do projeto
+
+## 🚀 Passo 1: Criar um Repositório no GitHub
+
+1. Acesse https://github.com/new
+2. Preencha:
+   - **Repository name**: `pridehub` ou `projeto-lgbtq`
+   - **Description**: `Site informativo sobre comunidade LGBTQIAPN+ com foco em Agênero - Projeto ETEC Junho 2024`
+   - **Public** ou **Private** (escolha conforme preferir)
+3. Clique em "Create repository"
+
+## 🖥️ Passo 2: Prepare seu Computador (Terminal/CMD)
+
+### No Windows (CMD):
+```bash
+# 1. Abra o Prompt de Comando
+# 2. Navegue até uma pasta onde guardar o projeto
+cd Desktop
+
+# 3. Crie uma pasta para o projeto
+mkdir pridehub
+cd pridehub
+```
+
+### No Mac/Linux (Terminal):
+```bash
+# 1. Abra o Terminal
+# 2. Navegue até uma pasta
+cd ~/Desktop
+
+# 3. Crie uma pasta
+mkdir pridehub
+cd pridehub
+```
+
+## 📥 Passo 3: Inicializar o Repositório Git
+
+```bash
+# Inicialize o Git
+git init
+
+# Configure seu nome e email (use os mesmos do GitHub)
+git config user.name "Seu Nome"
+git config user.email "seu@email.com"
+
+# Crie um arquivo README.md (opcional)
+echo "# PrideHub - Comunidade LGBTQIAPN+" > README.md
+```
+
+## 📄 Passo 4: Adicione o Arquivo HTML
+
+1. Copie o arquivo `index.html` para a pasta `pridehub`
+2. Verifique se está lá:
+
+```bash
+# No Windows
+dir
+
+# No Mac/Linux
+ls
+```
+
+Você deve ver:
+```
+index.html
+README.md
+.git (pasta oculta)
+```
+
+## 🔗 Passo 5: Conectar ao Repositório Remoto
+
+```bash
+# Adicione a URL do seu repositório (copie de https://github.com/seu-usuario/pridehub)
+git remote add origin https://github.com/seu-usuario/pridehub.git
+
+# Verifique a conexão
+git remote -v
+```
+
+## 📤 Passo 6: Commit e Push
+
+```bash
+# Adicione todos os arquivos
+git add .
+
+# Faça um commit com mensagem descritiva
+git commit -m "Adicionar site PrideHub - Comunidade LGBTQ+ com foco em Agênero"
+
+# Defina a branch principal
+git branch -M main
+
+# Faça o push para o GitHub
+git push -u origin main
+```
+
+## ✨ Passo 7: Ative GitHub Pages (Opcional - para Hospedagem Gratuita)
+
+1. Vá para seu repositório no GitHub
+2. Clique em "Settings"
+3. Role até "Pages"
+4. Em "Source", selecione "Deploy from a branch"
+5. Escolha "main" como branch
+6. Clique em "Save"
+7. Aguarde alguns minutos
+8. Seu site estará disponível em: `https://seu-usuario.github.io/pridehub`
+
+## 🎉 Pronto!
+
+Seu projeto está no GitHub! Você pode:
+
+- ✅ Compartilhar o link do repositório
+- ✅ Criar releases (versões)
+- ✅ Receber contribuições de outros
+- ✅ Fazer deploy automático
+- ✅ Acompanhar histórico de mudanças
+
+## 🔄 Próximas Atualizações
+
+Para fazer atualizações no futuro:
+
+```bash
+# Faça suas mudanças no arquivo
+# Depois execute:
+
+git add .
+git commit -m "Descrever as mudanças feitas"
+git push origin main
+```
+
+## 🐛 Solução de Problemas
+
+### "Erro: Could not read from remote repository"
+- Verifique se copiou a URL correta
+- Tente usar HTTPS em vez de SSH
+
+### "Permission denied (publickey)"
+- Configure suas chaves SSH no GitHub
+- Ou use HTTPS em vez de SSH
+
+### "fatal: The current branch main does not have any upstream tracking information"
+- Execute: `git push -u origin main`
+
+## 💡 Dicas Extras
+
+1. **Arquivo .gitignore** - Crie para ignorar arquivos (senhas, chaves API):
+```bash
+# Crie um arquivo .gitignore com conteúdo:
+node_modules/
+.env
+*.log
+```
+
+2. **Colaboradores** - Para adicionar outras pessoas:
+   - Settings → Collaborators → Add people
+
+3. **Issues** - Use para rastrear bugs e melhorias
+   - Issues → New issue
+
+4. **Branches** - Para trabalhar em novas features:
+```bash
+git checkout -b feature/nova-feature
+# Faça as mudanças
+git push origin feature/nova-feature
+# Abra um Pull Request
+```
+
+## 🌐 Compartilhando seu Projeto
+
+Você pode compartilhar de várias formas:
+
+1. **Link direto**: `https://github.com/seu-usuario/pridehub`
+2. **Link da página**: `https://seu-usuario.github.io/pridehub` (se GitHub Pages ativado)
+3. **QR Code**: Gere em https://goqr.me
+4. **Redes Sociais**: Compartilhe nas redes
+
+## 📚 Recursos Úteis
+
+- Documentação GitHub: https://docs.github.com
+- Git Cheat Sheet: https://github.github.com/training-kit/
+- Markdown Guide: https://www.markdownguide.org/
+
+---
+
+**Sucesso com seu projeto! 🏳️‍🌈**
+
+Se tiver dúvidas, consulte a documentação do GitHub ou peça ajuda na comunidade!

@@ -1,0 +1,287 @@
+# 🎨 Guia de Personalização do PrideHub
+
+Este documento explica como personalizar e editar o site conforme suas necessidades.
+
+## 📝 Editando o Arquivo HTML
+
+### 1. Abra o Arquivo
+- Use um editor de texto (Notepad++, VS Code, Sublime Text)
+- Abra o arquivo `index.html`
+- Localize a seção que quer editar
+
+### 2. Principais Seções para Editar
+
+#### 🎯 Título e Logo
+```html
+<div class="logo">
+    <span class="logo-emoji">🏳️‍🌈</span>
+    <span>PrideHub</span>
+</div>
+```
+Mude "PrideHub" para o nome que desejar.
+
+#### 📄 Textos da Home
+```html
+<h1>Bem-vindo ao PrideHub! 🌈</h1>
+<p>Um espaço seguro, inclusivo e colorido...</p>
+```
+Edite os textos entre as tags `<h1>`, `<p>`, etc.
+
+#### 🎉 Cartões de Benefícios
+Procure por:
+```html
+<div class="card">
+    <h3>🤝 Comunidade</h3>
+    <p>Conecte-se com pessoas que entendem...</p>
+</div>
+```
+Mude o emoji, título e descrição conforme quiser.
+
+#### 📚 Informações sobre LGBTQIAPN+
+Cada letra está em um bloco:
+```html
+<div class="letter-block">
+    <div class="letter">L</div>
+    <h3>Lésbica</h3>
+    <p>Uma mulher que sente atração...</p>
+</div>
+```
+Edite a descrição de cada identidade.
+
+#### 🏳️‍⚧️ Página Agênero
+```html
+<h3>O que é Agênero?</h3>
+<p>Agênero refere-se a uma identidade...</p>
+```
+Personalize as informações sobre agênero.
+
+#### 🎉 Eventos
+Cada evento é um cartão:
+```html
+<div class="event-card" data-category="parada">
+    <div class="event-image">🏳️‍🌈</div>
+    <div class="event-details">
+        <div class="event-title">Parada do Orgulho São Paulo</div>
+        <div class="event-info">📅 28 de Junho, 2024</div>
+        ...
+    </div>
+</div>
+```
+- Mude o emoji, título, data e informações
+- A categoria `data-category` deve ser: `parada`, `workshop`, `festa`, `palestra`
+
+#### 👤 Informações do Perfil
+```html
+<div class="profile-name">Alex Silva</div>
+<div class="profile-identity">Agênero • Pansexual • Ele/Eles</div>
+<div class="profile-bio">Ativista e criativo...</div>
+```
+Personalize com o nome e informações que desejar.
+
+## 🎨 Mudando Cores
+
+### Cores Principais (CSS Variables)
+No início da seção `<style>`, encontre:
+```css
+:root {
+    --rainbow-1: #E40303;    /* Vermelho */
+    --rainbow-2: #FF8C00;    /* Laranja */
+    --rainbow-3: #FFFF41;    /* Amarelo */
+    --rainbow-4: #008026;    /* Verde */
+    --rainbow-5: #24408E;    /* Azul */
+    --rainbow-6: #732982;    /* Roxo */
+    
+    --agenero-1: #000000;    /* Preto */
+    --agenero-2: #A3A3A3;    /* Cinza */
+    --agenero-3: #FFFFFF;    /* Branco */
+    --agenero-4: #810541;    /* Roxo escuro */
+}
+```
+
+Você pode mudar qualquer valor hex para a cor que quiser!
+
+### Exemplo de Mudança:
+```css
+/* Antes */
+--rainbow-1: #E40303;
+
+/* Depois - para azul */
+--rainbow-1: #0066FF;
+```
+
+### Cores Sugeridas para Outras Bandeiras:
+- **Trans**: Azul claro (#5BCEFA), Rosa (#F5A9B8), Branco (#FFFFFF)
+- **Não-binária**: Amarelo (#FFF430), Branco (#FFFFFF), Roxo (#9C4DC4)
+- **Lésbica**: Laranja (#FF7A2D), Branco (#FFFFFF), Rosa (#D40042)
+
+## ✏️ Mudando Fontes
+
+### Fonte Padrão
+```css
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+```
+
+Opções populares:
+- `Arial, sans-serif`
+- `'Open Sans', sans-serif`
+- `'Roboto', sans-serif`
+- `Georgia, serif` (serifada)
+
+## 🌈 Mudando o Tema de Cores por Seção
+
+Se quiser ativar o tema agênero permanentemente, no JavaScript procure:
+
+```javascript
+if (sectionId === 'agenero') {
+    document.body.classList.add('agenero-theme');
+}
+```
+
+Para ativar em outra seção:
+```javascript
+if (sectionId === 'about' || sectionId === 'agenero') {
+    document.body.classList.add('agenero-theme');
+}
+```
+
+## 📱 Ajustando o Design Responsivo
+
+Se quiser mudar o breakpoint para tablets:
+```css
+@media (max-width: 768px) {
+    /* Mudanças para telas menores */
+}
+```
+
+Você pode mudar `768px` para outro valor. Padrões comuns:
+- `480px` - Celulares pequenos
+- `768px` - Tablets
+- `1024px` - Desktops pequenos
+
+## 🔗 Adicionando Links Externos
+
+Para adicionar links para suas redes sociais:
+```html
+<a href="https://instagram.com/seu-usuario">Instagram</a>
+<a href="https://twitter.com/seu-usuario">Twitter</a>
+<a href="https://tiktok.com/@seu-usuario">TikTok</a>
+```
+
+## 📊 Adicionando Mais Eventos
+
+Para adicionar um novo evento, copie este modelo:
+```html
+<div class="event-card" data-category="workshop">
+    <div class="event-image">🎨</div>
+    <div class="event-details">
+        <div class="event-title">Nome do seu Evento</div>
+        <div class="event-info">📅 Data aqui</div>
+        <div class="event-info">📍 Local aqui</div>
+        <div class="event-info">🎟️ Preço aqui</div>
+        <div class="event-tag">workshop</div>
+    </div>
+</div>
+```
+
+Insira-o dentro da div com `id="events-grid"`.
+
+## 🎭 Adicionando Mais Identidades LGBTQIAPN+
+
+Para adicionar mais informações, copie este modelo:
+```html
+<div class="letter-block">
+    <div class="letter">X</div>
+    <h3>Sua Identidade</h3>
+    <p>Descrição da identidade...</p>
+</div>
+```
+
+## 🐛 Testando Mudanças
+
+1. Salve o arquivo (`Ctrl+S`)
+2. Abra no navegador (`F5` para recarregar)
+3. Verifique se tudo está funcionando
+
+## 📸 Adicionando Imagens
+
+Para adicionar um banner/imagem, use emojis (já inclusos) ou altere este código:
+```html
+<div class="event-image">🏳️‍🌈</div>
+```
+
+Para colocar uma imagem de arquivo:
+```html
+<img src="caminho/para/imagem.jpg" alt="descrição">
+```
+
+## 🎤 Adicionando Mais Personalidades Agênero
+
+Procure por:
+```html
+<li><strong>Munroe Bergdorf</strong> - Modelo e ativista trans</li>
+```
+
+Adicione quantos quiser nesse formato.
+
+## 🚀 Expandindo a Plataforma
+
+### Adicionar Seção Nova
+1. Crie uma div com classe `tab-content` e id único
+2. Adicione um link no navbar: `<li><a onclick="showSection('novo-id')">Novo</a></li>`
+3. Adicione o conteúdo HTML
+
+### Exemplo:
+```html
+<!-- No navbar -->
+<li><a onclick="showSection('comunidades')">Comunidades</a></li>
+
+<!-- No conteúdo -->
+<section id="comunidades" class="tab-content section">
+    <h2>Nossas Comunidades</h2>
+    <!-- seu conteúdo aqui -->
+</section>
+```
+
+## 💾 Salvar Alterações no GitHub
+
+Depois de editar:
+```bash
+# No terminal/CMD, na pasta do projeto
+git add .
+git commit -m "Descrever suas mudanças"
+git push origin main
+```
+
+## 📚 Recursos para Aprender Mais
+
+- **HTML**: https://www.w3schools.com/html/
+- **CSS**: https://www.w3schools.com/css/
+- **JavaScript**: https://www.w3schools.com/js/
+- **Cores Hex**: https://htmlcolorcodes.com/
+- **Emojis**: https://emojipedia.org/
+
+## ✨ Dicas Extras
+
+1. **Validar HTML**: https://validator.w3.org/
+2. **Testar Responsividade**: Abra DevTools (F12) no navegador
+3. **Paleta de Cores**: Use https://coolors.co/
+4. **Ícones**: Use emojis ou https://tabler-icons.io/
+
+## 🎯 Checklist de Personalização
+
+- [ ] Mudou o nome do site?
+- [ ] Personalizou as cores?
+- [ ] Atualizou os eventos?
+- [ ] Editou as descrições?
+- [ ] Testou em celular?
+- [ ] Fez upload no GitHub?
+- [ ] Ativou GitHub Pages?
+- [ ] Testou o link público?
+
+---
+
+**Boa personalização! 🌈✨**
+
+Se tiver problemas, consulte a documentação HTML/CSS ou experimente pequenas mudanças de cada vez.
