@@ -46,11 +46,26 @@
   }
 
   /* ========== SECTION COLOR THEMES ========== */
-  body.theme-rainbow { --bg: #0d0620; --text: #fff; }
-  body.theme-agender { --bg: #111; --text: #eee; }
-  body.theme-trans { --bg: #0a1a2e; --text: #e8f4fd; }
-  body.theme-bi { --bg: #1a0520; --text: #f5e6ff; }
-  body.theme-pride { --bg: #1a0a00; --text: #fff5e6; }
+  body.theme-rainbow {
+    --bg: #0d0620;
+    --text: #fff;
+  }
+  body.theme-agender {
+    --bg: #111;
+    --text: #eee;
+  }
+  body.theme-trans {
+    --bg: #0a1a2e;
+    --text: #e8f4fd;
+  }
+  body.theme-bi {
+    --bg: #1a0520;
+    --text: #f5e6ff;
+  }
+  body.theme-pride {
+    --bg: #1a0a00;
+    --text: #fff5e6;
+  }
 
   /* ========== SCROLLBAR ========== */
   ::-webkit-scrollbar { width: 6px; }
@@ -184,6 +199,8 @@
     display:flex; gap:3rem; justify-content:center; align-items:flex-end;
     animation: fadeUp 1s 0.4s ease both;
   }
+
+  /* Mascote SVG styles */
   .mascot-container { text-align:center; }
   .mascot-container p { font-size:0.8rem; color:rgba(255,255,255,0.4); margin-top:0.5rem; }
 
@@ -210,66 +227,158 @@
   }
 
   /* ========== FLYERS / BANNERS ========== */
-  .banners-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem; }
-  .banner-card { border-radius:16px; overflow:hidden; position:relative; height:220px; cursor:pointer; transition: transform 0.3s; }
+  .banners-grid {
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;
+  }
+  .banner-card {
+    border-radius:16px; overflow:hidden; position:relative;
+    height:220px; cursor:pointer;
+    transition: transform 0.3s;
+  }
   .banner-card:hover { transform:scale(1.02); }
   .banner-card svg { width:100%; height:100%; }
 
   /* ========== LGBTQIAPN+ INFO ========== */
   #sigla { background: linear-gradient(180deg, transparent, rgba(196,75,255,0.05), transparent); }
-  .sigla-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem; }
-  .sigla-card {
-    background: var(--card); border: 1px solid var(--border); border-radius:16px; padding: 2rem;
-    transition: transform 0.3s, border-color 0.3s; position:relative; overflow:hidden;
+  .sigla-grid {
+    display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem;
   }
-  .sigla-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+  .sigla-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius:16px;
+    padding: 2rem;
+    transition: transform 0.3s, border-color 0.3s;
+    position:relative; overflow:hidden;
+  }
+  .sigla-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  }
   .sigla-card:hover { transform:translateY(-4px); }
-  .sigla-letter { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight:900; line-height:1; margin-bottom:0.5rem; }
+  .sigla-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem; font-weight:900; line-height:1;
+    margin-bottom:0.5rem;
+  }
   .sigla-name { font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; }
   .sigla-desc { font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.65; }
 
   /* ========== AGÊNERO SECTION ========== */
-  #agender { background: linear-gradient(180deg, #111 0%, #0a0a0a 50%, #111 100%); position:relative; overflow:hidden; }
-  #agender::before { content:''; position:absolute; inset:0; background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(184,244,131,0.05) 50%, rgba(186,186,186,0.05) 100%); pointer-events:none; }
-  .agender-hero { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-bottom: 4rem; }
+  #agender {
+    background: linear-gradient(180deg, #111 0%, #0a0a0a 50%, #111 100%);
+    position:relative; overflow:hidden;
+  }
+  #agender::before {
+    content:'';
+    position:absolute; inset:0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(184,244,131,0.05) 50%, rgba(186,186,186,0.05) 100%);
+    pointer-events:none;
+  }
+  .agender-hero {
+    display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
+    margin-bottom: 4rem;
+  }
   @media(max-width:768px) { .agender-hero { grid-template-columns:1fr; } }
-  .agender-flag-display { display:flex; flex-direction:column; gap:0; border-radius:12px; overflow:hidden; height:200px; box-shadow: 0 0 60px rgba(184,244,131,0.15); }
+  .agender-flag-display {
+    display:flex; flex-direction:column; gap:0; border-radius:12px; overflow:hidden;
+    height:200px; box-shadow: 0 0 60px rgba(184,244,131,0.15);
+  }
   .agender-flag-display .stripe { flex:1; }
-  .agender-famous-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap:1.2rem; margin-top:2rem; }
-  .famous-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.5rem; text-align:center; }
-  .famous-avatar { width:60px; height:60px; border-radius:50%; margin:0 auto 0.8rem; display:flex; align-items:center; justify-content:center; font-size:1.8rem; background:linear-gradient(135deg,#000,#BABABA); }
+  .agender-famous-grid {
+    display:grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap:1.2rem;
+    margin-top:2rem;
+  }
+  .famous-card {
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px; padding:1.5rem;
+    text-align:center;
+  }
+  .famous-avatar {
+    width:60px; height:60px; border-radius:50%;
+    margin:0 auto 0.8rem;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.8rem;
+    background:linear-gradient(135deg,#000,#BABABA);
+  }
   .famous-name { font-weight:600; font-size:0.9rem; margin-bottom:0.3rem; }
   .famous-role { font-size:0.78rem; color:rgba(255,255,255,0.4); }
-  .curiosidade-box { background: rgba(184,244,131,0.06); border:1px solid rgba(184,244,131,0.2); border-radius:12px; padding:1.5rem; margin-top:1.5rem; }
+  .curiosidade-box {
+    background: rgba(184,244,131,0.06);
+    border:1px solid rgba(184,244,131,0.2);
+    border-radius:12px; padding:1.5rem;
+    margin-top:1.5rem;
+  }
   .curiosidade-box h4 { color:#B8F483; margin-bottom:0.8rem; font-size:1rem; }
   .curiosidade-box p { font-size:0.88rem; color:rgba(255,255,255,0.6); line-height:1.7; }
   .slogan-grid { display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:2rem; }
-  .slogan-pill { padding:0.5rem 1.2rem; border-radius:50px; font-size:0.82rem; font-weight:500; border:1px solid; }
+  .slogan-pill {
+    padding:0.5rem 1.2rem;
+    border-radius:50px;
+    font-size:0.82rem;
+    font-weight:500;
+    border:1px solid;
+  }
 
   /* ========== COMUNIDADE ========== */
   #community { background: rgba(255,255,255,0.01); }
-  .posts-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
-  .post-card { background: var(--card); border: 1px solid var(--border); border-radius:16px; padding:1.5rem; transition: border-color 0.3s; }
+  .posts-grid {
+    display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem;
+  }
+  .post-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius:16px; padding:1.5rem;
+    transition: border-color 0.3s;
+  }
   .post-card:hover { border-color: rgba(255,107,157,0.3); }
   .post-header { display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem; }
-  .post-avatar { width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:600; }
+  .post-avatar {
+    width:38px; height:38px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem;
+    font-weight:600;
+  }
   .post-user { font-weight:600; font-size:0.9rem; }
   .post-badge { font-size:0.68rem; color:rgba(255,255,255,0.4); }
   .post-text { font-size:0.9rem; line-height:1.65; color:rgba(255,255,255,0.75); margin-bottom:1rem; }
   .post-actions { display:flex; gap:1.2rem; }
   .post-action { background:none; border:none; color:rgba(255,255,255,0.4); font-size:0.82rem; cursor:pointer; transition:color 0.2s; display:flex; align-items:center; gap:0.3rem; }
   .post-action:hover { color:#FF6BCD; }
-  .new-post-box { background: var(--card); border:1px solid var(--border); border-radius:16px; padding:1.5rem; margin-bottom:2rem; }
-  .new-post-box textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:8px; color:#fff; padding:0.8rem; font-size:0.9rem; font-family:inherit; resize:vertical; min-height:80px; }
+  .new-post-box {
+    background: var(--card); border:1px solid var(--border);
+    border-radius:16px; padding:1.5rem; margin-bottom:2rem;
+  }
+  .new-post-box textarea {
+    width:100%; background:rgba(255,255,255,0.04);
+    border:1px solid var(--border); border-radius:8px;
+    color:#fff; padding:0.8rem; font-size:0.9rem;
+    font-family:inherit; resize:vertical; min-height:80px;
+  }
   .new-post-box .post-footer { display:flex; justify-content:space-between; align-items:center; margin-top:0.8rem; }
 
   /* ========== EVENTOS ========== */
   #events { background: linear-gradient(180deg, transparent, rgba(75,170,255,0.03), transparent); }
-  .events-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
-  .event-card { background: var(--card); border: 1px solid var(--border); border-radius:16px; overflow:hidden; transition: transform 0.3s; }
+  .events-grid {
+    display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem;
+  }
+  .event-card {
+    background: var(--card); border:1px solid var(--border);
+    border-radius:16px; overflow:hidden;
+    transition: transform 0.3s;
+  }
   .event-card:hover { transform:translateY(-4px); }
-  .event-banner { height:160px; display:flex; align-items:center; justify-content:center; font-size:3rem; position:relative; }
-  .event-banner-tag { position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.5); backdrop-filter:blur(10px); padding:0.25rem 0.7rem; border-radius:50px; font-size:0.72rem; font-weight:600; color:#fff; border:1px solid rgba(255,255,255,0.15); }
+  .event-banner {
+    height:160px; display:flex; align-items:center; justify-content:center;
+    font-size:3rem; position:relative;
+  }
+  .event-banner-tag {
+    position:absolute; top:12px; right:12px;
+    background:rgba(0,0,0,0.5); backdrop-filter:blur(10px);
+    padding:0.25rem 0.7rem; border-radius:50px;
+    font-size:0.72rem; font-weight:600; color:#fff;
+    border:1px solid rgba(255,255,255,0.15);
+  }
   .event-body { padding:1.5rem; }
   .event-date { font-size:0.75rem; color:var(--accent); font-weight:600; letter-spacing:0.05em; margin-bottom:0.5rem; }
   .event-title { font-size:1.05rem; font-weight:700; margin-bottom:0.5rem; }
@@ -281,76 +390,215 @@
   .event-spots { font-size:0.75rem; color:rgba(255,255,255,0.4); }
 
   /* ========== CRIAR EVENTO (MODAL) ========== */
-  .modal-overlay { display:none; position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); overflow-y:auto; padding:2rem; }
+  .modal-overlay {
+    display:none; position:fixed; inset:0; z-index:2000;
+    background:rgba(0,0,0,0.8); backdrop-filter:blur(10px);
+    overflow-y:auto; padding:2rem;
+  }
   .modal-overlay.open { display:flex; align-items:flex-start; justify-content:center; }
-  .modal-box { background:#141420; border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:100%; max-width:700px; padding:2.5rem; position:relative; margin:auto; }
-  .modal-close { position:absolute; top:1.5rem; right:1.5rem; background:rgba(255,255,255,0.05); border:none; color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; }
+  .modal-box {
+    background:#141420; border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px; width:100%; max-width:700px;
+    padding:2.5rem; position:relative; margin:auto;
+  }
+  .modal-close {
+    position:absolute; top:1.5rem; right:1.5rem;
+    background:rgba(255,255,255,0.05); border:none; color:#fff;
+    width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.1rem;
+    display:flex; align-items:center; justify-content:center;
+  }
   .modal-title { font-family:'Playfair Display',serif; font-size:1.8rem; margin-bottom:2rem; }
   .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
   @media(max-width:600px) { .form-grid { grid-template-columns:1fr; } }
   .form-group { margin-bottom:1.2rem; }
   .form-group.full { grid-column:1/-1; }
   .form-group label { display:block; font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.6); margin-bottom:0.4rem; letter-spacing:0.04em; }
-  .form-group input, .form-group textarea, .form-group select { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; color:#fff; padding:0.75rem 1rem; font-size:0.9rem; font-family:inherit; transition: border-color 0.3s; }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline:none; border-color:rgba(196,75,255,0.5); }
+  .form-group input, .form-group textarea, .form-group select {
+    width:100%; background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1); border-radius:10px;
+    color:#fff; padding:0.75rem 1rem; font-size:0.9rem; font-family:inherit;
+    transition: border-color 0.3s;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline:none; border-color:rgba(196,75,255,0.5);
+  }
   .form-group select option { background:#1a1a2e; }
   .form-group textarea { min-height:100px; resize:vertical; }
-  .ticket-types { display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; }
+  .ticket-types {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem;
+  }
   @media(max-width:500px) { .ticket-types { grid-template-columns:1fr; } }
-  .ticket-type { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:1rem; cursor:pointer; transition:border-color 0.2s; }
+  .ticket-type {
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:10px; padding:1rem; cursor:pointer;
+    transition:border-color 0.2s;
+  }
   .ticket-type.selected { border-color:rgba(196,75,255,0.6); background:rgba(196,75,255,0.08); }
   .ticket-type-name { font-weight:600; font-size:0.9rem; margin-bottom:0.3rem; }
   .ticket-type-desc { font-size:0.75rem; color:rgba(255,255,255,0.4); }
   .form-section-title { font-size:0.9rem; font-weight:700; color:rgba(255,255,255,0.7); margin:1.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); grid-column:1/-1; }
 
-  /* ========== PERFIL DE ABAS ========== */
+  /* ========== PERFIL ========== */
   #profile { background:rgba(255,255,255,0.01); }
-  .profile-form { display:grid; grid-template-columns:320px 1fr; gap:3rem; align-items:start; }
+  .profile-form {
+    display:grid; grid-template-columns:280px 1fr; gap:3rem; align-items:start;
+  }
   @media(max-width:900px) { .profile-form { grid-template-columns:1fr; } }
   .profile-sidebar { position:sticky; top:100px; }
-  .profile-card-preview { background: linear-gradient(135deg, rgba(196,75,255,0.12), rgba(75,170,255,0.08)); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:2rem; text-align:center; }
-  .profile-avatar-upload { width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg,#C44BFF,#4BAAFF); display:flex; align-items:center; justify-content:center; font-size:2.5rem; margin:0 auto 1rem; cursor:pointer; position:relative; overflow:hidden; }
+  .profile-card-preview {
+    background: linear-gradient(135deg, rgba(196,75,255,0.15), rgba(75,170,255,0.1));
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px; padding:2rem; text-align:center;
+  }
+  .profile-avatar-upload {
+    width:100px; height:100px; border-radius:50%;
+    background:linear-gradient(135deg,#C44BFF,#4BAAFF);
+    display:flex; align-items:center; justify-content:center;
+    font-size:2.5rem; margin:0 auto 1rem;
+    cursor:pointer; position:relative; overflow:hidden;
+  }
   .profile-avatar-upload input { position:absolute; inset:0; opacity:0; cursor:pointer; }
-  .profile-name-preview { font-family:'Playfair Display',serif; font-size:1.4rem; margin-bottom:0.2rem; }
-  .profile-pronouns-preview { font-size:0.75rem; color:var(--accent); font-weight:600; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em; }
-  .profile-bio-preview { font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.6; margin-bottom:1rem; }
-  .identity-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; justify-content:center; }
-  .identity-tag { padding:0.3rem 0.8rem; border-radius:50px; font-size:0.72rem; font-weight:600; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); }
-  .badges-row { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1.2rem; justify-content:center; }
-  .badge { padding:0.3rem 0.7rem; border-radius:50px; font-size:0.7rem; font-weight:500; background: rgba(196,75,255,0.12); border:1px solid rgba(196,75,255,0.25); color:#C44BFF; }
-  
+  .profile-name-preview { font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:0.3rem; }
+  .profile-bio-preview { font-size:0.82rem; color:rgba(255,255,255,0.45); }
+  .identity-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; justify-content:center; }
+  .identity-tag {
+    padding:0.3rem 0.8rem; border-radius:50px;
+    font-size:0.72rem; font-weight:600;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+  }
+  .badges-row { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; justify-content:center; }
+  .badge {
+    padding:0.25rem 0.6rem; border-radius:50px;
+    font-size:0.68rem;
+    background: rgba(196,75,255,0.15);
+    border:1px solid rgba(196,75,255,0.3);
+    color:#C44BFF;
+  }
   .tab-nav { display:flex; gap:0.5rem; margin-bottom:2rem; flex-wrap:wrap; }
-  .tab-btn { padding:0.6rem 1.2rem; border-radius:50px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:rgba(255,255,255,0.5); font-size:0.82rem; cursor:pointer; transition:all 0.2s; }
+  .tab-btn {
+    padding:0.6rem 1.2rem; border-radius:50px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    color:rgba(255,255,255,0.5); font-size:0.82rem; cursor:pointer;
+    transition:all 0.2s;
+  }
   .tab-btn.active { background:rgba(196,75,255,0.15); border-color:rgba(196,75,255,0.4); color:#C44BFF; }
   .tab-panel { display:none; }
   .tab-panel.active { display:block; }
 
   /* ========== ANIMATIONS ========== */
-  @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes fadeDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes float { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-12px) rotate(2deg); } }
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  @keyframes fadeDown {
+    from { opacity:0; transform:translateY(-20px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  @keyframes float {
+    0%,100% { transform:translateY(0) rotate(0deg); }
+    50% { transform:translateY(-12px) rotate(2deg); }
+  }
+  @keyframes rainbow-cycle {
+    0% { filter:hue-rotate(0deg); }
+    100% { filter:hue-rotate(360deg); }
+  }
+  @keyframes pulse-glow {
+    0%,100% { box-shadow:0 0 20px rgba(196,75,255,0.3); }
+    50% { box-shadow:0 0 40px rgba(196,75,255,0.6); }
+  }
+
   .floating { animation: float 4s ease-in-out infinite; }
 
-  /* ========== PROGRESS BAR & NOTIF ========== */
-  #progress-bar { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,#FF0018,#FF8C00,#FFED00,#008026,#004DFF,#750787); z-index:9999; transition:width 0.1s; }
-  footer { background:rgba(0,0,0,0.5); border-top:1px solid var(--border); padding:3rem 2rem; text-align:center; }
+  /* ========== RAINBOW PROGRESS BAR ========== */
+  #progress-bar {
+    position:fixed; top:0; left:0; height:3px;
+    background:linear-gradient(90deg,#FF0018,#FF8C00,#FFED00,#008026,#004DFF,#750787);
+    z-index:9999; transition:width 0.1s;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background:rgba(0,0,0,0.5);
+    border-top:1px solid var(--border);
+    padding:3rem 2rem;
+    text-align:center;
+  }
   footer p { font-size:0.82rem; color:rgba(255,255,255,0.3); }
-  .footer-rainbow { height:3px; background:linear-gradient(90deg,#FF0018 16.6%,#FF8C00 33.2%,#FFED00 49.8%,#008026 66.4%,#004DFF 83%,#750787 100%); margin-bottom:2rem; }
-  .divider { height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); margin:2rem 0; }
-  .tag-chip { display:inline-block; padding:0.4rem 0.9rem; border-radius:50px; font-size:0.78rem; font-weight:500; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); margin:0.25rem; cursor:pointer; transition:all 0.2s; }
-  .tag-chip.active { background:rgba(196,75,255,0.18); border-color:rgba(196,75,255,0.5); color:#efd8ff; }
-  .notification { position:fixed; bottom:2rem; right:2rem; z-index:3000; background:#1a1a2e; border:1px solid rgba(196,75,255,0.3); border-radius:12px; padding:1rem 1.5rem; font-size:0.88rem; transform:translateY(100px); opacity:0; transition:all 0.4s; max-width:300px; }
+  .footer-rainbow {
+    height:3px;
+    background:linear-gradient(90deg,#FF0018 16.6%,#FF8C00 33.2%,#FFED00 49.8%,#008026 66.4%,#004DFF 83%,#750787 100%);
+    margin-bottom:2rem;
+  }
+
+  /* ========== MISC ========== */
+  .divider {
+    height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    margin:2rem 0;
+  }
+  .tag-chip {
+    display:inline-block; padding:0.3rem 0.8rem;
+    border-radius:50px; font-size:0.72rem; font-weight:600;
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
+    margin:0.2rem;
+  }
+  .notification {
+    position:fixed; bottom:2rem; right:2rem; z-index:3000;
+    background:#1a1a2e; border:1px solid rgba(196,75,255,0.3);
+    border-radius:12px; padding:1rem 1.5rem;
+    font-size:0.88rem; transform:translateY(100px); opacity:0;
+    transition:all 0.4s;
+    max-width:300px;
+  }
   .notification.show { transform:translateY(0); opacity:1; }
-  .qr-placeholder { width:80px; height:80px; background: repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%) 0 0/10px 10px; border:3px solid #fff; border-radius:4px; display:inline-block; opacity:0.8; }
-  .level-bar { background:rgba(255,255,255,0.06); border-radius:50px; height:8px; overflow:hidden; margin-top:0.5rem; }
-  .level-fill { height:100%; border-radius:50px; background:linear-gradient(90deg,#C44BFF,#FF6BCD); transition:width 1s ease; }
+
+  /* ========== QR CODE STYLE ========== */
+  .qr-placeholder {
+    width:80px; height:80px;
+    background: repeating-conic-gradient(#fff 0% 25%, transparent 0% 50%) 0 0/10px 10px;
+    border:3px solid #fff; border-radius:4px;
+    display:inline-block;
+    opacity:0.8;
+  }
+
+  /* ========== STATS ROW ========== */
+  .stats-row {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1.5rem;
+    margin:3rem 0;
+  }
+  .stat-box {
+    background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.5rem;
+    text-align:center;
+  }
+  .stat-number {
+    font-family:'Playfair Display',serif; font-size:2.5rem;
+    background:linear-gradient(135deg,#C44BFF,#FF6BCD);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .stat-label { font-size:0.78rem; color:rgba(255,255,255,0.4); margin-top:0.3rem; }
+
+  /* ========== GAMIFICATION ========== */
+  .level-bar {
+    background:rgba(255,255,255,0.06); border-radius:50px; height:8px; overflow:hidden; margin-top:0.5rem;
+  }
+  .level-fill {
+    height:100%; border-radius:50px;
+    background:linear-gradient(90deg,#C44BFF,#FF6BCD);
+    transition:width 1s ease;
+  }
 </style>
 </head>
 <body>
 
+<!-- PROGRESS BAR -->
 <div id="progress-bar" style="width:0%"></div>
+
+<!-- NOTIFICATION -->
 <div class="notification" id="notif"></div>
 
+<!-- NAV -->
 <nav>
   <div class="nav-logo">🏳️‍🌈 PrideSpace</div>
   <div class="hamburger" onclick="toggleMenu()" id="ham">
@@ -368,47 +616,92 @@
   </div>
 </nav>
 
+<!-- ============================== HERO ============================== -->
 <section id="hero">
   <div class="rainbow-stripe"></div>
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">🌈 Etec — Mês da Diversidade · Junho 2025</div>
-    <h1 class="hero-title">Seu espaço de<br><span class="gradient-text">Orgulho & Conexão</span></h1>
+    <h1 class="hero-title">
+      Seu espaço de<br>
+      <span class="gradient-text">Orgulho & Conexão</span>
+    </h1>
     <p class="hero-sub">Um lugar seguro para aprender, celebrar identidades, conectar pessoas e criar eventos que transformam comunidades.</p>
     <div class="hero-btns">
       <a href="#sigla" class="btn-primary">Explorar Identidades</a>
       <a href="#events" class="btn-secondary">Ver Eventos →</a>
     </div>
 
+    <!-- MASCOTES -->
     <div class="mascot-hero">
       <div class="mascot-container floating">
+        <!-- MASCOTE LGBT -->
         <svg width="130" height="160" viewBox="0 0 130 160" xmlns="http://www.w3.org/2000/svg">
+          <!-- Corpo -->
           <ellipse cx="65" cy="115" rx="35" ry="40" fill="#FF6B9D"/>
+          <!-- Cabeça -->
           <circle cx="65" cy="68" r="30" fill="#FDBCB4"/>
+          <!-- Cabelo arco-íris -->
           <path d="M35 58 Q40 30 65 32 Q90 30 95 58" fill="none" stroke="#FF0018" stroke-width="6" stroke-linecap="round"/>
           <path d="M37 65 Q38 38 65 36 Q92 38 93 65" fill="none" stroke="#FF8C00" stroke-width="5" stroke-linecap="round"/>
           <path d="M38 70 Q40 45 65 42 Q90 45 92 70" fill="none" stroke="#FFED00" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="55" cy="65" r="5" fill="#333"/><circle cx="75" cy="65" r="5" fill="#333"/>
+          <!-- Olhos -->
+          <circle cx="55" cy="65" r="5" fill="#333"/>
+          <circle cx="75" cy="65" r="5" fill="#333"/>
+          <circle cx="57" cy="63" r="2" fill="#fff"/>
+          <circle cx="77" cy="63" r="2" fill="#fff"/>
+          <!-- Sorriso -->
           <path d="M56 76 Q65 84 74 76" fill="none" stroke="#c0604d" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Bochechas -->
+          <circle cx="50" cy="73" r="7" fill="rgba(255,100,100,0.3)"/>
+          <circle cx="80" cy="73" r="7" fill="rgba(255,100,100,0.3)"/>
+          <!-- Bandeira LGBT nas mãos -->
           <rect x="8" y="100" width="28" height="16" rx="2" fill="#FF0018"/>
-          <rect x="8" y="106" width="28" height="3" fill="#FF8C00"/><rect x="8" y="109" width="28" height="3" fill="#FFED00"/><rect x="8" y="112" width="28" height="4" fill="#008026"/>
+          <rect x="8" y="106" width="28" height="3" fill="#FF8C00"/>
+          <rect x="8" y="109" width="28" height="3" fill="#FFED00"/>
+          <rect x="8" y="112" width="28" height="4" fill="#008026"/>
+          <!-- Mastro -->
           <line x1="8" y1="100" x2="8" y2="135" stroke="#8B4513" stroke-width="3"/>
+          <!-- Estrelas ao redor -->
+          <text x="92" y="50" font-size="14">✨</text>
+          <text x="28" y="45" font-size="12">⭐</text>
+          <text x="100" y="90" font-size="11">💫</text>
         </svg>
         <p>Arco — Mascote LGBT+</p>
       </div>
 
       <div class="mascot-container floating" style="animation-delay:0.5s">
+        <!-- MASCOTE AGÊNERO -->
         <svg width="130" height="160" viewBox="0 0 130 160" xmlns="http://www.w3.org/2000/svg">
+          <!-- Corpo -->
           <ellipse cx="65" cy="115" rx="35" ry="40" fill="#666"/>
+          <!-- Cabeça -->
           <circle cx="65" cy="68" r="30" fill="#E0E0E0"/>
+          <!-- Cabelo listras agênero -->
           <path d="M35 58 Q40 28 65 30 Q90 28 95 58" fill="none" stroke="#000" stroke-width="7" stroke-linecap="round"/>
           <path d="M37 63 Q40 35 65 34 Q90 35 93 63" fill="none" stroke="#BABABA" stroke-width="6" stroke-linecap="round"/>
           <path d="M38 68 Q40 42 65 40 Q90 42 92 68" fill="none" stroke="#FFF" stroke-width="5" stroke-linecap="round"/>
           <path d="M38 73 Q40 48 65 46 Q90 48 92 73" fill="none" stroke="#B8F483" stroke-width="4" stroke-linecap="round"/>
-          <ellipse cx="55" cy="65" rx="5" ry="4" fill="#222"/><ellipse cx="75" cy="65" rx="5" ry="4" fill="#222"/>
+          <!-- Olhos (expressão neutra elegante) -->
+          <ellipse cx="55" cy="65" rx="5" ry="4" fill="#222"/>
+          <ellipse cx="75" cy="65" rx="5" ry="4" fill="#222"/>
+          <circle cx="57" cy="63" r="2" fill="#fff"/>
+          <circle cx="77" cy="63" r="2" fill="#fff"/>
+          <!-- Sorriso sutil -->
           <path d="M57 76 Q65 81 73 76" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"/>
+          <!-- Bandeira agênero -->
           <rect x="8" y="100" width="28" height="16" rx="2" fill="#000"/>
+          <rect x="8" y="104" width="28" height="3" fill="#BABABA"/>
+          <rect x="8" y="107" width="28" height="3" fill="#FFF"/>
+          <rect x="8" y="110" width="28" height="3" fill="#B8F483"/>
+          <rect x="8" y="113" width="28" height="3" fill="#FFF"/>
+          <!-- Mastro -->
           <line x1="8" y1="100" x2="8" y2="135" stroke="#555" stroke-width="3"/>
+          <!-- Símbolo agênero (círculo neutro) -->
+          <circle cx="105" cy="55" r="10" fill="none" stroke="#B8F483" stroke-width="2.5"/>
+          <text x="101" y="59" font-size="11" fill="#B8F483">∅</text>
+          <text x="90" y="90" font-size="12">💚</text>
+          <text x="28" y="45" font-size="11">⚪</text>
         </svg>
         <p>Neo — Mascote Agênero</p>
       </div>
@@ -416,504 +709,1050 @@
   </div>
 </section>
 
+<!-- ============================== BANNERS ============================== -->
 <section id="banners">
   <div class="container">
     <span class="section-tag">Flyers & Banners</span>
     <h2 class="section-title">Celebre a Diversidade</h2>
+    <p class="section-desc">Arte e informação para compartilhar e inspirar.</p>
+
     <div class="banners-grid">
+
+      <!-- Banner 1: Orgulho LGBT -->
       <div class="banner-card">
         <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="220" fill="#1a0030"/>
-          <text x="200" y="90" text-anchor="middle" font-family="serif" font-size="34" fill="white">MÊS DO</text>
-          <text x="200" y="140" text-anchor="middle" font-family="serif" font-size="40" fill="#FF6BCD" font-weight="bold">ORGULHO</text>
+          <defs>
+            <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a0030"/>
+              <stop offset="100%" style="stop-color:#000820"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="220" fill="url(#bg1)"/>
+          <!-- Stripes -->
+          <rect y="0" width="400" height="36" fill="#FF0018" opacity="0.85"/>
+          <rect y="36" width="400" height="37" fill="#FF8C00" opacity="0.85"/>
+          <rect y="73" width="400" height="37" fill="#FFED00" opacity="0.85"/>
+          <rect y="110" width="400" height="37" fill="#008026" opacity="0.85"/>
+          <rect y="147" width="400" height="37" fill="#004DFF" opacity="0.85"/>
+          <rect y="184" width="400" height="36" fill="#750787" opacity="0.85"/>
+          <!-- Overlay -->
+          <rect width="400" height="220" fill="rgba(0,0,0,0.55)"/>
+          <!-- Texto -->
+          <text x="200" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="bold" fill="white">🏳️‍🌈 ORGULHO</text>
+          <text x="200" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="rgba(255,255,255,0.85)">Mês da Diversidade</text>
+          <text x="200" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="rgba(255,255,255,0.5)" letter-spacing="3">JUNHO · ETEC · 2025</text>
+          <!-- Estrelas deco -->
+          <text x="20" y="40" font-size="20">✦</text>
+          <text x="360" y="190" font-size="20">✦</text>
+          <text x="350" y="35" font-size="14">✦</text>
+          <text x="30" y="195" font-size="14">✦</text>
         </svg>
       </div>
+
+      <!-- Banner 2: Agênero -->
       <div class="banner-card">
         <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="220" fill="#111"/>
-          <text x="40" y="90" font-family="sans-serif" font-size="28" font-weight="bold" fill="#B8F483">AGÊNERO</text>
-          <text x="40" y="125" font-family="sans-serif" font-size="15" fill="#fff">Identidade além do binarismo.</text>
+          <defs>
+            <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#080808"/>
+              <stop offset="100%" style="stop-color:#0f1a0a"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="220" fill="url(#bg2)"/>
+          <!-- Bandeira agênero como faixas -->
+          <rect y="0" width="400" height="44" fill="#000" opacity="0.9"/>
+          <rect y="44" width="400" height="44" fill="#BABABA" opacity="0.9"/>
+          <rect y="88" width="400" height="44" fill="#FFFFFF" opacity="0.9"/>
+          <rect y="132" width="400" height="44" fill="#B8F483" opacity="0.9"/>
+          <rect y="176" width="400" height="44" fill="#BABABA" opacity="0.9"/>
+          <!-- Overlay dark -->
+          <rect width="400" height="220" fill="rgba(0,0,0,0.60)"/>
+          <!-- Símbolo central -->
+          <circle cx="200" cy="100" r="55" fill="none" stroke="rgba(184,244,131,0.5)" stroke-width="2"/>
+          <circle cx="200" cy="100" r="38" fill="rgba(0,0,0,0.5)" stroke="rgba(184,244,131,0.8)" stroke-width="2"/>
+          <text x="200" y="110" text-anchor="middle" font-size="30" fill="#B8F483">∅</text>
+          <!-- Texto -->
+          <text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white">AGÊNERO</text>
+          <text x="200" y="195" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="rgba(255,255,255,0.4)" letter-spacing="2">ALÉM DO BINÁRIO · ALÉM DOS RÓTULOS</text>
         </svg>
       </div>
+
+      <!-- Banner 3: Comunidade -->
       <div class="banner-card">
         <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="220" fill="#7c3aed"/>
-          <text x="200" y="110" text-anchor="middle" font-family="sans-serif" font-size="24" fill="white" font-weight="bold">ESPAÇO SEGURO</text>
+          <defs>
+            <radialGradient id="bg3" cx="40%" cy="50%" r="80%">
+              <stop offset="0%" style="stop-color:#3d0070"/>
+              <stop offset="100%" style="stop-color:#000520"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="220" fill="url(#bg3)"/>
+          <!-- Círculos deco -->
+          <circle cx="60" cy="60" r="40" fill="rgba(255,107,157,0.15)"/>
+          <circle cx="340" cy="160" r="60" fill="rgba(75,170,255,0.1)"/>
+          <circle cx="200" cy="110" r="80" fill="rgba(196,75,255,0.08)"/>
+          <!-- Pessoas deco -->
+          <text x="40" y="120" font-size="30">🏳️‍🌈</text>
+          <text x="100" y="90" font-size="22">🏳️‍⚧️</text>
+          <text x="280" y="130" font-size="22">✊</text>
+          <text x="330" y="80" font-size="22">💜</text>
+          <!-- Texto -->
+          <text x="200" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="bold" fill="white">COMUNIDADE</text>
+          <text x="200" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">Juntes somos mais fortes</text>
+          <text x="200" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="rgba(196,75,255,0.8)" letter-spacing="2">AMOR · RESPEITO · ORGULHO</text>
+          <!-- Underline deco -->
+          <line x1="100" y1="168" x2="300" y2="168" stroke="rgba(196,75,255,0.4)" stroke-width="1"/>
         </svg>
       </div>
+
+      <!-- Banner 4: Trans -->
+      <div class="banner-card">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#0a2038"/>
+              <stop offset="50%" style="stop-color:#1a0a2e"/>
+              <stop offset="100%" style="stop-color:#0a2038"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="220" fill="url(#bg4)"/>
+          <!-- Trans flag stripes -->
+          <rect y="0" width="400" height="44" fill="#55CDFC" opacity="0.7"/>
+          <rect y="44" width="400" height="44" fill="#F7A8B8" opacity="0.7"/>
+          <rect y="88" width="400" height="44" fill="#FFF" opacity="0.7"/>
+          <rect y="132" width="400" height="44" fill="#F7A8B8" opacity="0.7"/>
+          <rect y="176" width="400" height="44" fill="#55CDFC" opacity="0.7"/>
+          <rect width="400" height="220" fill="rgba(0,0,10,0.55)"/>
+          <!-- Símbolo trans -->
+          <text x="200" y="85" text-anchor="middle" font-size="42">⚧️</text>
+          <text x="200" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="white">TRANSGÊNERO</text>
+          <text x="200" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.5)" letter-spacing="2">VISIBILIDADE É VIDA</text>
+        </svg>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- ============================== SIGLA ============================== -->
 <section id="sigla">
   <div class="container">
-    <span class="section-tag">Dicionário de Identidades</span>
-    <h2 class="section-title">Entendendo a Sigla</h2>
-    <div class="sigla-grid" id="siglaContainer"></div>
+    <span class="section-tag">Conheça as Identidades</span>
+    <h2 class="section-title">O que significa <span style="background:linear-gradient(135deg,#FF6B9D,#C44BFF,#4BAAFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">LGBTQIAPN+</span>?</h2>
+    <p class="section-desc">Cada letra representa uma identidade única e legítima. Conheça e respeite cada uma.</p>
+
+    <div class="sigla-grid" id="siglaGrid"></div>
   </div>
 </section>
 
+<!-- ============================== AGÊNERO ============================== -->
 <section id="agender">
   <div class="container">
-    <span class="section-tag" style="color:#B8F483">Identidade em Destaque</span>
-    <h2 class="section-title">Pessoas Agênero</h2>
+    <span class="section-tag" style="color:#B8F483">Foco Principal</span>
+    <h2 class="section-title">Agênero:<br><span style="color:#B8F483">Além do Binário</span></h2>
+
     <div class="agender-hero">
       <div>
-        <h3 style="font-size:1.5rem; margin-bottom:1rem; font-family:serif;">O que significa ser Agênero?</h3>
-        <p style="color:rgba(255,255,255,0.7); line-height:1.7;">Uma pessoa agênero é alguém que possui uma identidade não-binária na qual se percebe sem um gênero ou com uma total ausência dele.</p>
-        <div class="curiosidade-box">
-          <h4>Você Sabia?</h4>
-          <p>A listra verde central simboliza o gênero não-binário (já que o verde é a cor oposta ao roxo, mistura clássica de azul/rosa).</p>
-        </div>
-      </div>
-      <div class="agender-flag-display">
-        <div class="stripe" style="background:#000"></div>
-        <div class="stripe" style="background:#BABABA"></div>
-        <div class="stripe" style="background:#FFF"></div>
-        <div class="stripe" style="background:#B8F483"></div>
-        <div class="stripe" style="background:#FFF"></div>
-        <div class="stripe" style="background:#BABABA"></div>
-        <div class="stripe" style="background:#000"></div>
-      </div>
-    </div>
-    <div class="agender-famous-grid" id="famousContainer"></div>
-  </div>
-</section>
+        <p style="color:rgba(255,255,255,0.65);line-height:1.8;font-size:1rem;margin-bottom:1.5rem;">
+          <strong style="color:#B8F483">Agênero</strong> (também chamado de genderless, genderfree ou non-gendered) é uma identidade de gênero na qual a pessoa se identifica como não possuindo gênero algum, ou como tendo uma identidade neutra em relação ao gênero.
+        </p>
+        <p style="color:rgba(255,255,255,0.55);line-height:1.8;font-size:0.92rem;margin-bottom:1.5rem;">
+          Pessoas agênero frequentemente se descrevem como não se encaixando nas categorias tradicionais de homem ou mulher, sem necessariamente transitar entre esses polos. A experiência agênero é singular e pode se manifestar de diferentes formas para cada indivíduo.
+        </p>
+        <p style="color:rgba(255,255,255,0.55);line-height:1.8;font-size:0.92rem;">
+          O termo está incluído no espectro não-binário e é reconhecido por organizações internacionais de saúde e direitos humanos como uma identidade válida. Pessoas agênero podem ou não ser transgênero, e podem usar qualquer pronome ou pronomes neutros como "elu/delu" em português.
+        </p>
 
-<section id="community">
-  <div class="container">
-    <span class="section-tag">Mural de Vozes</span>
-    <h2 class="section-title">Espaço da Comunidade</h2>
-    <div class="new-post-box">
-      <textarea id="postInput" placeholder="Escreva algo inspirador ou partilhe conhecimento..."></textarea>
-      <div class="post-footer">
-        <span style="font-size:0.8rem; color:rgba(255,255,255,0.4)">Postagem Anônima</span>
-        <button class="btn-primary" style="padding:0.5rem 1.5rem; font-size:0.85rem;" onclick="addPost()">Publicar</button>
-      </div>
-    </div>
-    <div class="posts-grid" id="postsContainer"></div>
-  </div>
-</section>
-
-<section id="events">
-  <div class="container">
-    <span class="section-tag">Agenda Coletiva</span>
-    <h2 class="section-title">Próximos Eventos</h2>
-    <div class="events-grid" id="eventsContainer"></div>
-  </div>
-</section>
-
-<section id="profile">
-  <div class="container">
-    <span class="section-tag">Seu Painel</span>
-    <h2 class="section-title">Perfil de Diversidade</h2>
-    <p class="section-desc">Configure sua ficha de orgulho para customizar sua identidade visual na rede interna.</p>
-
-    <div class="profile-form">
-      <div class="profile-sidebar">
-        <div class="profile-card-preview">
-          <div class="profile-avatar-upload">
-            <span id="previewAvatar">👤</span>
-            <input type="file" id="avatarFile" onchange="handleAvatarChange(this)">
-          </div>
-          <h3 class="profile-name-preview" id="previewName">Estudante Orgulho</h3>
-          <div class="profile-pronouns-preview" id="previewPronouns">Ela/Dela</div>
-          
-          <div class="identity-tags" id="profileTags">
-            <span class="identity-tag" id="previewVinculo">Estudante Etec</span>
-            <span class="identity-tag" id="previewGenero" style="background:rgba(184,244,131,0.1); border-color:rgba(184,244,131,0.3); color:#B8F483;">Agênero</span>
-            <span class="identity-tag" id="previewOrientacao">Assexual</span>
-          </div>
-
-          <div class="divider" style="margin:1.2rem 0;"></div>
-          
-          <p class="profile-bio-preview" id="previewBio">Focado em construir ambientes acolhedores na instituição através do respeito recíproco.</p>
-          
-          <div style="text-align:left;">
-            <div style="display:flex; justify-content:space-between; font-size:0.75rem; font-weight:600;">
-              <span>Nível de Engajamento</span>
-              <span style="color:#C44BFF" id="previewLevel">Nv. 3</span>
-            </div>
-            <div class="level-bar"><div class="level-fill" id="previewLevelBar" style="width:65%"></div></div>
-          </div>
-          
-          <div class="badges-row" id="previewBadges">
-            <span class="badge">⭐ Multi-Rodas</span>
-            <span class="badge" style="background:rgba(6,182,212,0.12); border-color:rgba(6,182,212,0.25); color:#06b6d4;">📚 Info-Expert</span>
-          </div>
+        <div class="curiosidade-box" style="margin-top:1.5rem">
+          <h4>💡 Você sabia?</h4>
+          <p>O conceito de identidades além do binário homem/mulher existe em diversas culturas ao redor do mundo há séculos. Os <em>Hijra</em> na Índia, os <em>Fa'afafine</em> na Samoa e os <em>Two-Spirit</em> entre povos indígenas norte-americanos são exemplos históricos de identidades que transcendem o binarismo de gênero.</p>
         </div>
       </div>
 
       <div>
-        <div class="tab-nav">
-          <button class="tab-btn active" id="btn-edit" onclick="switchTab('edit')">1. Dados de Identidade</button>
-          <button class="tab-btn" id="btn-preferences" onclick="switchTab('preferences')">2. Interesses & Conquistas</button>
+        <h3 style="margin-bottom:1rem;font-size:1rem;color:rgba(255,255,255,0.5);">Bandeira Agênero</h3>
+        <div class="agender-flag-display">
+          <div class="stripe" style="background:#000"></div>
+          <div class="stripe" style="background:#BABABA"></div>
+          <div class="stripe" style="background:#FFFFFF"></div>
+          <div class="stripe" style="background:#B8F483"></div>
+          <div class="stripe" style="background:#FFFFFF"></div>
+          <div class="stripe" style="background:#BABABA"></div>
+          <div class="stripe" style="background:#000"></div>
+        </div>
+        <div style="margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+          <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.8rem;font-size:0.78rem;">
+            <div style="width:16px;height:16px;background:#000;border:1px solid #555;border-radius:2px;margin-bottom:0.3rem;"></div>
+            <strong style="color:rgba(255,255,255,0.7);">Preto</strong>
+            <p style="color:rgba(255,255,255,0.35);">Ausência de gênero</p>
+          </div>
+          <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.8rem;font-size:0.78rem;">
+            <div style="width:16px;height:16px;background:#BABABA;border-radius:2px;margin-bottom:0.3rem;"></div>
+            <strong style="color:rgba(255,255,255,0.7);">Cinza</strong>
+            <p style="color:rgba(255,255,255,0.35);">Semi-gênero</p>
+          </div>
+          <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.8rem;font-size:0.78rem;">
+            <div style="width:16px;height:16px;background:#FFFFFF;border-radius:2px;margin-bottom:0.3rem;"></div>
+            <strong style="color:rgba(255,255,255,0.7);">Branco</strong>
+            <p style="color:rgba(255,255,255,0.35);">Todos os gêneros</p>
+          </div>
+          <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.8rem;font-size:0.78rem;">
+            <div style="width:16px;height:16px;background:#B8F483;border-radius:2px;margin-bottom:0.3rem;"></div>
+            <strong style="color:rgba(255,255,255,0.7);">Verde</strong>
+            <p style="color:rgba(255,255,255,0.35);">Identidades não-binárias</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slogans -->
+    <h3 style="margin-bottom:1rem;font-size:1.1rem;">Slogans & Afirmações</h3>
+    <div class="slogan-grid">
+      <span class="slogan-pill" style="color:#B8F483;border-color:rgba(184,244,131,0.3)">🌿 "Sem gênero, sem limite"</span>
+      <span class="slogan-pill" style="color:#BABABA;border-color:rgba(186,186,186,0.3)">⚪ "Além do binário, além dos rótulos"</span>
+      <span class="slogan-pill" style="color:#fff;border-color:rgba(255,255,255,0.2)">✨ "Minha identidade, minha escolha"</span>
+      <span class="slogan-pill" style="color:#B8F483;border-color:rgba(184,244,131,0.3)">🌱 "Agênero é válido"</span>
+      <span class="slogan-pill" style="color:#BABABA;border-color:rgba(186,186,186,0.2)">∅ "Nulo não significa inexistente"</span>
+      <span class="slogan-pill" style="color:#fff;border-color:rgba(255,255,255,0.15)">💚 "Livre de rótulos, plene de ser"</span>
+    </div>
+
+    <!-- Pessoas famosas agênero -->
+    <h3 style="margin-top:3rem;margin-bottom:1.5rem;font-size:1.1rem;">Personalidades Agênero</h3>
+    <div class="agender-famous-grid">
+      <div class="famous-card">
+        <div class="famous-avatar" style="background:linear-gradient(135deg,#1a1a1a,#444)">🎤</div>
+        <div class="famous-name">Tyler, The Creator</div>
+        <div class="famous-role">Rapper e produtor musical</div>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;">Explorou sua não-conformidade de gênero em várias entrevistas e letras musicais.</p>
+      </div>
+      <div class="famous-card">
+        <div class="famous-avatar" style="background:linear-gradient(135deg,#1a1a2a,#444)">🎭</div>
+        <div class="famous-name">Sam Smith</div>
+        <div class="famous-role">Cantor(a) britânico(a)</div>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;">Anunciou em 2019 que se identifica como não-binário e pediu o uso de pronomes they/them.</p>
+      </div>
+      <div class="famous-card">
+        <div class="famous-avatar" style="background:linear-gradient(135deg,#1a2a1a,#3a4a3a)">📺</div>
+        <div class="famous-name">Asia Kate Dillon</div>
+        <div class="famous-role">Ator/atriz e ativista</div>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;">Primeiro artista não-binário conhecido em TV americana (Billions, Orange is the New Black).</p>
+      </div>
+      <div class="famous-card">
+        <div class="famous-avatar" style="background:linear-gradient(135deg,#2a1a2a,#4a3a4a)">🎶</div>
+        <div class="famous-name">Angel Haze</div>
+        <div class="famous-role">Rapper norte-americana</div>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;">Se identifica como agênero e tem sido vocal sobre direitos da comunidade LGBTQIA+.</p>
+      </div>
+    </div>
+
+    <!-- Curiosidades -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2rem;">
+      <div class="curiosidade-box">
+        <h4>📚 Definição Formal</h4>
+        <p>A Associação Americana de Psicologia (APA) reconhece identidades não-binárias e agênero como parte natural da variação humana de gênero, sem classificá-las como transtornos.</p>
+      </div>
+      <div class="curiosidade-box">
+        <h4>🌍 No Brasil</h4>
+        <p>Desde 2018, o STF permitiu que pessoas trans e não-binárias alterem nome e gênero no registro civil sem necessidade de cirurgia ou laudos médicos. O movimento cresce no país.</p>
+      </div>
+      <div class="curiosidade-box">
+        <h4>🔤 Pronomes Neutros</h4>
+        <p>Em português, pronomes neutros como "elu", "delu", "ile" têm sido adotados por pessoas agênero e não-binárias para evitar o binarismo das formas tradicionais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== COMUNIDADE ============================== -->
+<section id="community">
+  <div class="container">
+    <span class="section-tag">Fórum & Comunidade</span>
+    <h2 class="section-title">Troque Ideias,<br>Faça Conexões</h2>
+    <p class="section-desc">Espaço seguro para compartilhar experiências, perguntas e apoio mútuo.</p>
+
+    <div class="new-post-box">
+      <div style="display:flex;gap:1rem;align-items:flex-start;">
+        <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#C44BFF,#FF6BCD);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🌈</div>
+        <textarea id="postInput" placeholder="Compartilhe algo com a comunidade..."></textarea>
+      </div>
+      <div class="post-footer">
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span class="tag-chip" style="cursor:pointer" onclick="addTag(this,'#LGBTQ')">🏷️ #LGBTQ</span>
+          <span class="tag-chip" style="cursor:pointer" onclick="addTag(this,'#Agênero')">#Agênero</span>
+          <span class="tag-chip" style="cursor:pointer" onclick="addTag(this,'#Apoio')">#Apoio</span>
+          <span class="tag-chip" style="cursor:pointer" onclick="addTag(this,'#Pergunta')">#Pergunta</span>
+        </div>
+        <button class="btn-primary" style="padding:0.6rem 1.5rem;font-size:0.88rem;" onclick="publishPost()">Publicar</button>
+      </div>
+    </div>
+
+    <div class="posts-grid" id="postsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================== EVENTOS ============================== -->
+<section id="events">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+      <div>
+        <span class="section-tag">Agenda LGBT+</span>
+        <h2 class="section-title">Eventos & Encontros</h2>
+      </div>
+      <button class="btn-primary" onclick="openCreateEvent()" style="margin-top:3rem;">+ Criar Evento</button>
+    </div>
+    <p class="section-desc">Descubra eventos da comunidade perto de você ou online.</p>
+
+    <!-- Filtros -->
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+      <button class="tab-btn active" onclick="filterEvents('all',this)">Todos</button>
+      <button class="tab-btn" onclick="filterEvents('online',this)">Online</button>
+      <button class="tab-btn" onclick="filterEvents('presencial',this)">Presencial</button>
+      <button class="tab-btn" onclick="filterEvents('gratuito',this)">Gratuitos</button>
+      <button class="tab-btn" onclick="filterEvents('festa',this)">Festas</button>
+      <button class="tab-btn" onclick="filterEvents('educativo',this)">Educativos</button>
+    </div>
+
+    <div class="events-grid" id="eventsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================== PERFIL ============================== -->
+<section id="profile">
+  <div class="container">
+    <span class="section-tag">Comunidade · Identidade</span>
+    <h2 class="section-title">Crie seu Perfil</h2>
+    <p class="section-desc">Mostre quem você é para a comunidade.</p>
+
+    <div class="profile-form">
+      <!-- Sidebar preview -->
+      <div class="profile-sidebar">
+        <div class="profile-card-preview">
+          <div class="profile-avatar-upload" id="avatarPreview">
+            <span id="avatarEmoji">🌈</span>
+            <input type="file" accept="image/*" onchange="previewAvatar(this)">
+          </div>
+          <div class="profile-name-preview" id="namePreview">Seu Nome</div>
+          <div class="profile-bio-preview" id="bioPreview">Sua bio aparecerá aqui...</div>
+          <div class="identity-tags" id="identityTags">
+            <span class="identity-tag">🌈 LGBT+</span>
+          </div>
+          <div class="level-bar" style="margin-top:1rem;">
+            <div class="level-fill" style="width:30%"></div>
+          </div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:0.3rem;">Nível 1 · Novate Explorer</div>
+          <div class="badges-row" id="badgesRow">
+            <span class="badge">✨ Novate</span>
+          </div>
         </div>
 
-        <div id="tab-edit" class="tab-panel active">
+        <!-- Social card -->
+        <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:1.2rem;margin-top:1rem;">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-bottom:0.8rem;letter-spacing:0.05em;">CARTÃO SOCIAL</div>
+          <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.5rem;">
+            <span style="font-size:1.2rem">🌈</span>
+            <div>
+              <div style="font-size:0.82rem;font-weight:600;" id="cardName">Seu Nome</div>
+              <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);" id="cardPronouns">pronomes aqui</div>
+            </div>
+          </div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);">🎟️ 0 eventos · 💬 0 conexões · 🏅 Explorador</div>
+        </div>
+      </div>
+
+      <!-- Main form -->
+      <div>
+        <div class="tab-nav">
+          <button class="tab-btn active" onclick="switchTab('basic',this)">📋 Básico</button>
+          <button class="tab-btn" onclick="switchTab('identity',this)">🎭 Identidade</button>
+          <button class="tab-btn" onclick="switchTab('social',this)">🤝 Social</button>
+          <button class="tab-btn" onclick="switchTab('privacy',this)">🔐 Privacidade</button>
+        </div>
+
+        <!-- Básico -->
+        <div class="tab-panel active" id="tab-basic">
           <div class="form-grid">
             <div class="form-group">
-              <label>Nome Social / Apelido</label>
-              <input type="text" id="inputName" value="Estudante Orgulho" oninput="updateProfilePreview()">
+              <label>Nome Completo / Username</label>
+              <input type="text" placeholder="Como você quer ser chamade?" oninput="updatePreview('name',this.value)">
             </div>
-            
             <div class="form-group">
-              <label>Vínculo Institucional</label>
-              <select id="inputVinculo" onchange="updateProfilePreview()">
-                <option value="Estudante Etec">Estudante Matriculado/a</option>
-                <option value="Professor/a Etec">Corpo Docente (Professor)</option>
-                <option value="Funcionário/a">Equipe Administrativa / Apoio</option>
-                <option value="Egresso Etec">Ex-Aluno (Egresso)</option>
-                <option value="Comunidade">Comunidade Externa / Visitante</option>
-              </select>
+              <label>Email</label>
+              <input type="email" placeholder="seu@email.com">
             </div>
-
             <div class="form-group">
-              <label>Pronomes de Tratamento</label>
-              <select id="inputPronounSelect" onchange="toggleCustomPronoun()">
-                <option value="Ela/Dela">Ela / Dela</option>
-                <option value="Ele/Dele">Ele / Dele</option>
-                <option value="Elu/Delu">Elu / Delu (Neutro)</option>
-                <option value="Ela/Elu">Ela / Elu (Misto)</option>
-                <option value="Ele/Elu">Ele / Elu (Misto)</option>
-                <option value="custom">Outros / Personalizado...</option>
-              </select>
+              <label>Telefone (opcional)</label>
+              <input type="tel" placeholder="(11) 99999-9999">
             </div>
-
-            <div class="form-group" id="customPronounBox" style="display:none;">
-              <label>Digite seus pronomes</label>
-              <input type="text" id="inputPronounsCustom" placeholder="Ex: Per/Pers ou Não utilizo" oninput="updateProfilePreview()">
-            </div>
-
             <div class="form-group">
-              <label>Identidade / Gênero</label>
-              <select id="inputGenero" onchange="updateProfilePreview()">
-                <option value="Cisgênero">Cisgênero</option>
-                <option value="Agênero" selected>Agênero</option>
-                <option value="Transgênero">Transgênero</option>
-                <option value="Não-Binário">Não-Binário</option>
-                <option value="Gênero Fluido">Gênero Fluido</option>
-                <option value="Queer">Queer</option>
-                <option value="Prefiro não responder">Prefiro não responder</option>
-              </select>
+              <label>Cidade / País</label>
+              <input type="text" placeholder="São Paulo, Brasil">
             </div>
-
             <div class="form-group">
-              <label>Orientação Afetiva / Sexual</label>
-              <select id="inputOrientacao" onchange="updateProfilePreview()">
-                <option value="Heterossexual">Heterossexual</option>
-                <option value="Lésbica">Lésbica</option>
-                <option value="Gay">Gay</option>
-                <option value="Bissexual">Bissexual</option>
-                <option value="Pansexual">Pansexual</option>
-                <option value="Assexual" selected>Assexual</option>
-                <option value="Aromântico">Aromântico</option>
-              </select>
+              <label>Data de Nascimento</label>
+              <input type="date">
             </div>
-
+            <div class="form-group">
+              <label>Profissão / Área</label>
+              <input type="text" placeholder="Estudante, artista, dev...">
+            </div>
             <div class="form-group full">
-              <label>Biografia do Painel</label>
-              <textarea id="inputBio" oninput="updateProfilePreview()">Focado em construir ambientes acolhedores na instituição através do respeito recíproco.</textarea>
+              <label>Bio Curta</label>
+              <textarea placeholder="Me conte sobre você em 2–3 linhas..." rows="3" oninput="updatePreview('bio',this.value)"></textarea>
+            </div>
+            <div class="form-group full">
+              <label>Me descreva em uma frase ✨</label>
+              <div style="display:flex;gap:0.5rem;">
+                <input type="text" id="phraseInput" placeholder="Ex: Criature coloride que ama arte e liberdade">
+                <button class="btn-secondary" style="white-space:nowrap;padding:0.6rem 1rem;font-size:0.82rem;" onclick="generatePhrase()">IA ✨</button>
+              </div>
             </div>
           </div>
-          <button class="btn-primary" style="margin-top:1rem; padding:0.7rem 2rem; font-size:0.9rem;" onclick="saveProfileData()">Confirmar Identidade</button>
         </div>
 
-        <div id="tab-preferences" class="tab-panel">
-          <div class="form-group">
-            <label>Definir Bandeira de Orgulho do Topo do Site</label>
-            <select id="themeSelector" onchange="changeTheme(this.value)">
-              <option value="default">Padrão Espacial Noturno</option>
-              <option value="rainbow">Arco-Íris (LGBTQIAPN+)</option>
-              <option value="agender" selected>Orgulho Agênero (Verde, Cinza & Preto)</option>
-              <option value="trans">Orgulho Trans (Azul, Rosa & Branco)</option>
-              <option value="bi">Orgulho Bissexual (Rosa, Roxo & Azul)</option>
-            </select>
+        <!-- Identidade -->
+        <div class="tab-panel" id="tab-identity">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Sexualidade</label>
+              <select onchange="updateIdentityTags()">
+                <option value="">Prefiro não informar</option>
+                <option value="gay">Gay</option>
+                <option value="lesbica">Lésbica</option>
+                <option value="bissexual">Bissexual</option>
+                <option value="pansexual">Pansexual</option>
+                <option value="assexual">Assexual</option>
+                <option value="demissexual">Demissexual</option>
+                <option value="queer">Queer</option>
+                <option value="heterossexual">Heterossexual</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Identidade de Gênero</label>
+              <select onchange="updateIdentityTags()">
+                <option value="">Prefiro não informar</option>
+                <option value="mulher_cis">Mulher Cisgênero</option>
+                <option value="homem_cis">Homem Cisgênero</option>
+                <option value="mulher_trans">Mulher Transgênero</option>
+                <option value="homem_trans">Homem Transgênero</option>
+                <option value="nao_binario">Não-Binário</option>
+                <option value="agênero">Agênero ∅</option>
+                <option value="genero_fluido">Gênero Fluido</option>
+                <option value="bigênero">Bigênero</option>
+                <option value="demi_genero">Demigênero</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Pronomes</label>
+              <select onchange="updatePronounPreview(this.value)">
+                <option value="ele/dele">ele/dele</option>
+                <option value="ela/dela">ela/dela</option>
+                <option value="elu/delu">elu/delu (neutro)</option>
+                <option value="ile/dile">ile/dile (neutro)</option>
+                <option value="they/them">they/them</option>
+                <option value="qualquer">qualquer um</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Idiomas</label>
+              <input type="text" placeholder="Português, Inglês, Espanhol...">
+            </div>
+            <div class="form-group full">
+              <label>Interesses (selecione todos que se aplicam)</label>
+              <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.5rem;" id="interestsContainer">
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Tags de Personalidade</label>
+              <div style="display:flex;flex-wrap:wrap;gap:0.5rem;" id="personalityContainer"></div>
+            </div>
           </div>
-          
-          <div class="divider"></div>
-          
-          <label style="display:block; font-size:0.85rem; font-weight:600; color:rgba(255,255,255,0.7); margin-bottom:0.5rem;">Áreas de Interesse Educacional</label>
-          <div id="interestsContainer"></div>
-          
-          <div style="margin-top:1.5rem;">
-            <label style="display:block; font-size:0.85rem; font-weight:600; color:rgba(255,255,255,0.7); margin-bottom:0.5rem;">Seu Histórico / Conquistas Desbloqueadas</label>
-            <div id="badgesSelectContainer" style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-top:0.5rem;">
-              <div class="ticket-type selected" id="b1" onclick="toggleBadgeItem('b1', '⭐ Multi-Rodas')">
-                <div class="ticket-type-name">⭐ Multi-Rodas</div>
-                <div class="ticket-type-desc">Participou de mais de 3 palestras de debate</div>
+        </div>
+
+        <!-- Social -->
+        <div class="tab-panel" id="tab-social">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Instagram</label>
+              <input type="text" placeholder="@usuario">
+            </div>
+            <div class="form-group">
+              <label>TikTok</label>
+              <input type="text" placeholder="@usuario">
+            </div>
+            <div class="form-group">
+              <label>Twitter / X</label>
+              <input type="text" placeholder="@usuario">
+            </div>
+            <div class="form-group">
+              <label>LinkedIn</label>
+              <input type="text" placeholder="linkedin.com/in/usuario">
+            </div>
+            <div class="form-group full">
+              <label>🎯 Tipo de eventos que curte</label>
+              <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.5rem;" id="eventTypesContainer"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacidade -->
+        <div class="tab-panel" id="tab-privacy">
+          <div style="display:grid;gap:1rem;">
+            <div class="form-group">
+              <label>Visibilidade do Perfil</label>
+              <select>
+                <option>Público — visível a todos</option>
+                <option>Limitado — só comunidade</option>
+                <option>Privado — só amigos</option>
+              </select>
+            </div>
+            <div style="display:grid;gap:0.8rem;">
+              <label style="font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.6);">O que pode ser visível?</label>
+              <div class="privacy-toggle-row" onclick="togglePrivacy(this)" style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1rem;cursor:pointer;">
+                <span style="font-size:0.88rem;">📍 Localização</span>
+                <div class="toggle-dot" style="width:40px;height:22px;background:rgba(255,255,255,0.08);border-radius:11px;position:relative;transition:0.3s;"><div style="position:absolute;left:3px;top:3px;width:16px;height:16px;background:#888;border-radius:50%;transition:0.3s;"></div></div>
               </div>
-              <div class="ticket-type selected" id="b2" onclick="toggleBadgeItem('b2', '📚 Info-Expert')">
-                <div class="ticket-type-name">📚 Info-Expert</div>
-                <div class="ticket-type-desc">Leu todas as definições da sigla</div>
+              <div class="privacy-toggle-row" onclick="togglePrivacy(this)" style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1rem;cursor:pointer;">
+                <span style="font-size:0.88rem;">🎟️ Histórico de eventos</span>
+                <div class="toggle-dot" style="width:40px;height:22px;background:rgba(196,75,255,0.3);border-radius:11px;position:relative;transition:0.3s;"><div style="position:absolute;right:3px;top:3px;width:16px;height:16px;background:#C44BFF;border-radius:50%;transition:0.3s;"></div></div>
               </div>
-              <div class="ticket-type" id="b3" onclick="toggleBadgeItem('b3', '📣 Ativista')">
-                <div class="ticket-type-name">📣 Ativista</div>
-                <div class="ticket-type-desc">Publicou um panfleto ou conteúdo comunitário</div>
-              </div>
-              <div class="ticket-type" id="b4" onclick="toggleBadgeItem('b4', '🤝 Aliado Fiel')">
-                <div class="ticket-type-name">🤝 Aliado Fiel</div>
-                <div class="ticket-type-desc">Engajado no combate ao preconceito</div>
+              <div class="privacy-toggle-row" onclick="togglePrivacy(this)" style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1rem;cursor:pointer;">
+                <span style="font-size:0.88rem;">👥 Lista de conexões</span>
+                <div class="toggle-dot" style="width:40px;height:22px;background:rgba(196,75,255,0.3);border-radius:11px;position:relative;transition:0.3s;"><div style="position:absolute;right:3px;top:3px;width:16px;height:16px;background:#C44BFF;border-radius:50%;transition:0.3s;"></div></div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div style="margin-top:2rem;display:flex;gap:1rem;">
+          <button class="btn-primary" onclick="saveProfile()">Salvar Perfil ✨</button>
+          <button class="btn-secondary" onclick="shareCard()">Compartilhar Cartão</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="modal-overlay" id="createEventModal" onclick="closeCreateEventOutside(event)">
+<!-- ============================== CRIAR EVENTO MODAL ============================== -->
+<div class="modal-overlay" id="createEventModal">
   <div class="modal-box">
-    <button class="modal-close" onclick="closeCreateEvent()">×</button>
-    <h3 class="modal-title">Propagar Nova Ação Comunitária</h3>
-    <div class="form-grid">
-      <div class="form-group full"><label>Nome do Evento</label><input type="text" id="evTitle" placeholder="Ex: Debate Aberto"></div>
-      <div class="form-group"><label>Data</label><input type="date" id="evDate"></div>
-      <div class="form-group"><label>Local</label><input type="text" id="evLoc" placeholder="Ex: Auditório"></div>
-    </div>
-    <div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1.5rem;">
-      <button class="btn-primary" onclick="submitEventForm()">Publicar Evento</button>
+    <button class="modal-close" onclick="closeCreateEvent()">✕</button>
+    <h2 class="modal-title">Criar Evento</h2>
+
+    <div class="form-grid" id="eventForm">
+      <div class="form-section-title">📋 Informações Básicas</div>
+
+      <div class="form-group full">
+        <label>Nome do Evento *</label>
+        <input type="text" id="ev-name" placeholder="Ex: 1ª Marcha do Orgulho da Etec">
+      </div>
+      <div class="form-group full">
+        <label>Descrição</label>
+        <textarea id="ev-desc" placeholder="Descreva seu evento..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Categoria</label>
+        <select id="ev-cat">
+          <option>Marcha / Parada</option>
+          <option>Festa / Balada</option>
+          <option>Palestra / Workshop</option>
+          <option>Exibição Cultural</option>
+          <option>Encontro / Roda de Conversa</option>
+          <option>Educativo</option>
+          <option>Online</option>
+          <option>Outros</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Organizador Responsável</label>
+        <input type="text" id="ev-org" placeholder="Seu nome ou organização">
+      </div>
+      <div class="form-group">
+        <label>Data *</label>
+        <input type="date" id="ev-date">
+      </div>
+      <div class="form-group">
+        <label>Horário *</label>
+        <input type="time" id="ev-time">
+      </div>
+      <div class="form-group">
+        <label>Local ou Link</label>
+        <input type="text" id="ev-local" placeholder="Endereço ou URL">
+      </div>
+      <div class="form-group">
+        <label>Tipo</label>
+        <select id="ev-type">
+          <option value="presencial">Presencial</option>
+          <option value="online">Online</option>
+          <option value="hibrido">Híbrido</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Limite de Participantes</label>
+        <input type="number" id="ev-limit" placeholder="0 = ilimitado" min="0">
+      </div>
+      <div class="form-group">
+        <label>Tags (separadas por vírgula)</label>
+        <input type="text" id="ev-tags" placeholder="pride, lgbtq, educação...">
+      </div>
+
+      <div class="form-section-title">🎟️ Ingressos</div>
+
+      <div class="form-group full">
+        <label>Tipo de Ingresso</label>
+        <div class="ticket-types">
+          <div class="ticket-type selected" onclick="selectTicket(this,'gratuito')">
+            <div class="ticket-type-name">🆓 Gratuito</div>
+            <div class="ticket-type-desc">Sem cobrança</div>
+          </div>
+          <div class="ticket-type" onclick="selectTicket(this,'pago')">
+            <div class="ticket-type-name">💰 Pago</div>
+            <div class="ticket-type-desc">Com valor definido</div>
+          </div>
+          <div class="ticket-type" onclick="selectTicket(this,'doacao')">
+            <div class="ticket-type-name">💝 Doação</div>
+            <div class="ticket-type-desc">Valor livre</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" id="priceGroup" style="display:none">
+        <label>Preço Inteiro (R$)</label>
+        <input type="number" id="ev-price" placeholder="0.00" step="0.01">
+      </div>
+      <div class="form-group" id="halfGroup" style="display:none">
+        <label>Meia Entrada (R$)</label>
+        <input type="number" id="ev-half" placeholder="0.00" step="0.01">
+      </div>
+      <div class="form-group" id="vipGroup" style="display:none">
+        <label>VIP (R$)</label>
+        <input type="number" id="ev-vip" placeholder="0.00" step="0.01">
+      </div>
+      <div class="form-group">
+        <label>Cupom de Desconto</label>
+        <input type="text" id="ev-coupon" placeholder="PRIDE2025">
+      </div>
+
+      <div class="form-section-title">📜 Regras & Informações</div>
+
+      <div class="form-group full">
+        <label>Regras do Evento</label>
+        <textarea id="ev-rules" placeholder="Espaço seguro para todas as identidades. Proibido qualquer ato de discriminação..." rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Controle de Idade</label>
+        <select id="ev-age">
+          <option value="livre">Livre</option>
+          <option value="14">14+</option>
+          <option value="16">16+</option>
+          <option value="18">18+ (adultos)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Evento</label>
+        <select id="ev-public">
+          <option value="publico">Público</option>
+          <option value="privado">Privado</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>FAQ (perguntas frequentes)</label>
+        <textarea id="ev-faq" placeholder="P: Posso levar crianças? R: Sim, se livre para todos." rows="3"></textarea>
+      </div>
+
+      <div class="form-group full" style="margin-top:1rem;">
+        <button class="btn-primary" style="width:100%;padding:1rem;" onclick="submitEvent()">🚀 Publicar Evento</button>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- ============================== FOOTER ============================== -->
 <footer>
   <div class="container">
     <div class="footer-rainbow"></div>
-    <span class="qr-placeholder"></span>
-    <p>© 2025 PrideSpace Etec. Respeito e Diversidade nos Direitos Humanos.</p>
+    <div class="nav-logo" style="font-size:2rem;margin-bottom:1rem;">🏳️‍🌈 PrideSpace</div>
+    <p>Criado com 💜 para o Mês da Diversidade · Etec · Junho 2025</p>
+    <p style="margin-top:0.5rem;">Amor é amor. Identidade é legítima. Você pertence aqui.</p>
+    <div style="margin-top:1.5rem;display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+      <span class="tag-chip">🌈 LGBT+</span>
+      <span class="tag-chip">⚪ Agênero</span>
+      <span class="tag-chip">💙 Trans</span>
+      <span class="tag-chip">💜 Bi</span>
+      <span class="tag-chip">🖤 Lésbica</span>
+      <span class="tag-chip">💚 Pan</span>
+      <span class="tag-chip">🤍 Ace</span>
+    </div>
   </div>
 </footer>
 
+<!-- ============================== SCRIPTS ============================== -->
 <script>
-const siglaData = [
-  { l: "L", name: "Lésbicas", desc: "Mulheres que se sentem atraídas afetiva/sexualmente por mulheres.", color: "#FF4500" },
-  { l: "G", name: "Gays", desc: "Homens que se sentem atraídos afetiva/sexualmente por homens.", color: "#008026" },
-  { l: "B", name: "Bissexuais", desc: "Atração afetiva ou sexual por mais de um gênero.", color: "#D60270" },
-  { l: "T", name: "Transgêneros", desc: "Indivíduos cuja identidade difere do sexo biológico de nascimento.", color: "#55CDFC" },
-  { l: "Q", name: "Queer", desc: "Pessoas que não se rotulam nos padrões normativos de gênero/orientação.", color: "#750787" },
-  { l: "A", name: "Assexuais", desc: "Pessoas que vivenciam pouca ou nenhuma atração sexual por outrem.", color: "#fff" },
-  { l: "+", name: "Mais", desc: "Todas as outras infinitas variações de orgulho e amor.", color: "#FF6BCD" }
-];
+// ======= PROGRESS BAR =======
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = (scrolled / total) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
 
-const famousData = [
-  { name: "Angel Haze", role: "Rapper e Poeta", avatar: "🎤" },
-  { name: "Bambie Thug", role: "Artista Musical", avatar: "🔮" }
-];
-
-let posts = [
-  { id: 1, user: "Anônimo", badge: "Aluno de TI", text: "Incrível ver a Etec promovendo esse espaço de debate estruturado!", likes: 12, liked: false }
-];
-
-let events = [
-  { id: 1, title: "Mesa Redonda: Vivências Não-Binárias e Espaço Escolar", date: "2025-06-12", loc: "Auditório Bloco A", priceType: "free", priceText: "Gratuito", spots: "40 vagas", icon: "🌈" }
-];
-
-let activeBadges = ["⭐ Multi-Rodas", "📚 Info-Expert"];
-
-window.onload = function() {
-  renderSigla();
-  renderFamous();
-  renderPosts();
-  renderEvents();
-  initInterests();
-  updateProfilePreview();
-
-  window.onscroll = function() {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById("progress-bar").style.width = ((winScroll / height) * 100) + "%";
+  // Color themes by section
+  const sections = {
+    hero: 'default',
+    banners: 'rainbow',
+    sigla: 'rainbow',
+    agender: 'agender',
+    community: 'pride',
+    events: 'trans',
+    profile: 'bi'
   };
-};
+  for (const [id, theme] of Object.entries(sections)) {
+    const el = document.getElementById(id);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= 80 && rect.bottom >= 80) {
+        document.body.className = theme === 'default' ? '' : 'theme-' + theme;
+        break;
+      }
+    }
+  }
+});
 
-function toggleMenu() { document.getElementById("navlinks").classList.toggle("open"); }
-function openCreateEvent() { document.getElementById("createEventModal").classList.add("open"); }
-function closeCreateEvent() { document.getElementById("createEventModal").classList.remove("open"); }
-function closeCreateEventOutside(e) { if(e.target.id === "createEventModal") closeCreateEvent(); }
+// ======= NAV =======
+function toggleMenu() {
+  document.getElementById('navlinks').classList.toggle('open');
+}
+
+// ======= NOTIFICATIONS =======
+function showNotif(msg, color='#C44BFF') {
+  const n = document.getElementById('notif');
+  n.textContent = msg;
+  n.style.borderColor = color + '55';
+  n.classList.add('show');
+  setTimeout(() => n.classList.remove('show'), 3000);
+}
+
+// ======= SIGLA DATA =======
+const siglaData = [
+  { letter:'L', name:'Lésbica', color:'#FF6B9D', desc:'Mulheres que se sentem atraídas emocional, romântica e/ou sexualmente por outras mulheres. A bandeira lésbica possui as cores laranja, branco e rosa.' },
+  { letter:'G', name:'Gay', color:'#4B9AFF', desc:'Termo amplamente usado para descrever pessoas homossexuais, especialmente homens atraídos por outros homens. A bandeira lésbica tradicional é o arco-íris.' },
+  { letter:'B', name:'Bissexual', color:'#D60270', desc:'Pessoas atraídas por dois ou mais gêneros. A bandeira é rosa, lilás e azul. Bisexualidade não é uma fase e não significa indecisão.' },
+  { letter:'T', name:'Transgênero', color:'#55CDFC', desc:'Pessoas cuja identidade de gênero difere do sexo atribuído no nascimento. Inclui mulheres trans, homens trans e identidades não-binárias. A bandeira é azul, rosa e branco.' },
+  { letter:'Q', name:'Queer', color:'#C44BFF', desc:'Termo guarda-chuva que abrange identidades que não se encaixam nas categorias tradicionais de gênero e sexualidade. Historicamente usado como slur, foi reapropriado pela comunidade.' },
+  { letter:'I', name:'Intersexo', color:'#FFD700', desc:'Pessoas nascidas com características físicas, hormonais ou genéticas que não se encaixam nas definições binárias típicas de corpos masculinos ou femininos. Não é o mesmo que ser trans.' },
+  { letter:'A', name:'Assexual', color:'#AAAAAA', desc:'Pessoas que experimentam pouca ou nenhuma atração sexual. Assexualidade é um espectro que inclui demissexuais, graysexuais e outros. É válida e não é um transtorno.' },
+  { letter:'P', name:'Pansexual', color:'#FF218C', desc:'Atração romântica, emocional ou sexual por pessoas independente de seu gênero. O prefixo "pan" vem do grego e significa "tudo/todos". A bandeira é rosa, amarelo e azul.' },
+  { letter:'N', name:'Não-Binário', color:'#9370DB', desc:'Pessoa cuja identidade de gênero não se enquadra exclusivamente nas categorias homem ou mulher. Inclui identidades como agênero, bigênero, gênero fluido, entre outras.' },
+  { letter:'+', name:'E muito mais', color:'#4BFF9D', desc:'O "+" representa todas as outras identidades que não estão explicitamente listadas na sigla: demissexual, gênero fluido, aromântico, andrógino, e tantas outras experiências humanas válidas.' },
+];
 
 function renderSigla() {
-  const container = document.getElementById("siglaContainer");
-  container.innerHTML = "";
-  siglaData.forEach(item => {
-    container.innerHTML += `
-      <div class="sigla-card">
-        <div class="sigla-letter" style="color:${item.color}">${item.l}</div>
-        <div class="sigla-name">${item.name}</div>
-        <div class="sigla-desc">${item.desc}</div>
-      </div>`;
+  const grid = document.getElementById('siglaGrid');
+  siglaData.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'sigla-card';
+    card.style.cssText += `cursor:default;`;
+    card.innerHTML = `
+      <style>.sigla-card[data-id="${s.letter}"]::before { background: ${s.color}; }</style>
+      <div class="sigla-letter" style="color:${s.color}">${s.letter}</div>
+      <div class="sigla-name">${s.name}</div>
+      <div class="sigla-desc">${s.desc}</div>
+    `;
+    card.dataset.id = s.letter;
+    card.style.setProperty('--c', s.color);
+    card.querySelector('style')?.remove?.();
+    const before = document.createElement('style');
+    before.textContent = `.sigla-card:nth-child(${siglaData.indexOf(s)+1})::before { background: ${s.color}; }`;
+    document.head.appendChild(before);
+    grid.appendChild(card);
   });
 }
 
-function renderFamous() {
-  const container = document.getElementById("famousContainer");
-  container.innerHTML = "";
-  famousData.forEach(p => {
-    container.innerHTML += `
-      <div class="famous-card">
-        <div class="famous-avatar">${p.avatar}</div>
-        <div class="famous-name">${p.name}</div>
-        <div class="famous-role">${p.role}</div>
+// ======= EVENTS DATA =======
+let allEvents = [
+  { id:1, emoji:'🏳️‍🌈', title:'Parada do Orgulho Etec', date:'14 Jun 2025', time:'14h', local:'Praça Central, SP', type:'presencial', category:'festa', price:null, spots:500, color:'linear-gradient(135deg,#FF6B9D,#C44BFF)' },
+  { id:2, emoji:'📚', title:'Roda de Conversa: Identidades', date:'20 Jun 2025', time:'10h', local:'Zoom — Online', type:'online', category:'educativo', price:null, spots:100, color:'linear-gradient(135deg,#4B9AFF,#4BFF9D)' },
+  { id:3, emoji:'🎉', title:'Festa Pride — Noite das Cores', date:'28 Jun 2025', time:'21h', local:'Club Diverso, SP', type:'presencial', category:'festa', price:{inteiro:40,meia:20}, spots:300, color:'linear-gradient(135deg,#FF8C00,#FF0018)' },
+  { id:4, emoji:'🎨', title:'Expo Arte Queer', date:'5 Jul 2025', time:'13h', local:'Centro Cultural SP', type:'presencial', category:'educativo', price:null, spots:200, color:'linear-gradient(135deg,#C44BFF,#4BAAFF)' },
+  { id:5, emoji:'💻', title:'Workshop: Criação de Espaços Seguros Online', date:'12 Jul 2025', time:'15h', local:'Google Meet', type:'online', category:'educativo', price:null, spots:50, color:'linear-gradient(135deg,#4BFF9D,#4BAAFF)' },
+  { id:6, emoji:'🎭', title:'Teatro: Histórias Agênero', date:'19 Jul 2025', time:'19h', local:'Teatro Municipal, SP', type:'presencial', category:'educativo', price:{inteiro:30,meia:15}, spots:120, color:'linear-gradient(135deg,#888,#B8F483)' },
+];
+
+let selectedTicketType = 'gratuito';
+
+function renderEvents(filter = 'all') {
+  const grid = document.getElementById('eventsGrid');
+  grid.innerHTML = '';
+  const filtered = filter === 'all' ? allEvents : allEvents.filter(e => {
+    if (filter === 'online') return e.type === 'online';
+    if (filter === 'presencial') return e.type === 'presencial';
+    if (filter === 'gratuito') return !e.price;
+    if (filter === 'festa') return e.category === 'festa';
+    if (filter === 'educativo') return e.category === 'educativo';
+    return true;
+  });
+  filtered.forEach(ev => {
+    const div = document.createElement('div');
+    div.className = 'event-card';
+    div.innerHTML = `
+      <div class="event-banner" style="background:${ev.color}">
+        <span>${ev.emoji}</span>
+        <span class="event-banner-tag">${ev.type}</span>
+      </div>
+      <div class="event-body">
+        <div class="event-date">📅 ${ev.date} · ${ev.time}</div>
+        <div class="event-title">${ev.title}</div>
+        <div class="event-loc">📍 ${ev.local}</div>
+        <div class="event-footer">
+          <span class="${ev.price ? 'price-paid' : 'price-free'}">${ev.price ? `R$ ${ev.price.inteiro} / Meia R$ ${ev.price.meia}` : '✓ Gratuito'}</span>
+          <span class="event-spots">👥 ${ev.spots} vagas</span>
+        </div>
+        <button class="btn-primary" style="width:100%;margin-top:1rem;padding:0.6rem;font-size:0.85rem;" onclick="confirmPresence(${ev.id})">
+          Confirmar Presença
+        </button>
       </div>`;
+    grid.appendChild(div);
   });
 }
+
+function filterEvents(f, btn) {
+  document.querySelectorAll('#events .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderEvents(f);
+}
+
+function confirmPresence(id) {
+  const ev = allEvents.find(e => e.id === id);
+  if (ev) showNotif('✅ Presença confirmada em: ' + ev.title, '#4BFF9D');
+}
+
+// ======= CREATE EVENT MODAL =======
+function openCreateEvent() {
+  document.getElementById('createEventModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCreateEvent() {
+  document.getElementById('createEventModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function selectTicket(el, type) {
+  document.querySelectorAll('.ticket-type').forEach(t => t.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedTicketType = type;
+  const pg = document.getElementById('priceGroup');
+  const hg = document.getElementById('halfGroup');
+  const vg = document.getElementById('vipGroup');
+  if (type === 'pago') {
+    pg.style.display = 'block';
+    hg.style.display = 'block';
+    vg.style.display = 'block';
+  } else {
+    pg.style.display = 'none';
+    hg.style.display = 'none';
+    vg.style.display = 'none';
+  }
+}
+function submitEvent() {
+  const name = document.getElementById('ev-name').value.trim();
+  if (!name) { showNotif('⚠️ Informe o nome do evento', '#FF6B9D'); return; }
+  const date = document.getElementById('ev-date').value;
+  const time = document.getElementById('ev-time').value;
+  const local = document.getElementById('ev-local').value || 'A definir';
+  const type = document.getElementById('ev-type').value;
+  const cat = document.getElementById('ev-cat').value;
+  const price = selectedTicketType === 'pago' ? {
+    inteiro: parseFloat(document.getElementById('ev-price').value)||0,
+    meia: parseFloat(document.getElementById('ev-half').value)||0
+  } : null;
+  const limit = parseInt(document.getElementById('ev-limit').value)||100;
+  const colors = [
+    'linear-gradient(135deg,#C44BFF,#FF6BCD)',
+    'linear-gradient(135deg,#4BAAFF,#4BFF9D)',
+    'linear-gradient(135deg,#FF8C00,#FF0018)',
+    'linear-gradient(135deg,#B8F483,#888)'
+  ];
+  allEvents.unshift({
+    id: Date.now(), emoji:'🌟', title: name,
+    date: date ? new Date(date+'T12:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'}) : 'A definir',
+    time: time || '00h', local, type, category: cat.toLowerCase().includes('festa') ? 'festa' : 'educativo',
+    price, spots: limit, color: colors[Math.floor(Math.random()*colors.length)]
+  });
+  closeCreateEvent();
+  renderEvents();
+  showNotif('🚀 Evento publicado com sucesso!', '#4BFF9D');
+}
+
+// ======= POSTS =======
+let posts = [
+  { id:1, user:'Caio Oliveira', badge:'🏳️‍🌈 Membro', emoji:'💜', color:'#C44BFF', text:'Que bom ter um espaço assim! Finalmente me sinto representade. Quem mais é agênero aqui?', likes:24, comments:8, tags:['#Agênero','#Representação'] },
+  { id:2, user:'Ana Lima', badge:'✨ Organizadora', emoji:'🌟', color:'#FF6BCD', text:'Lembrem que o Workshop de Espaços Seguros está chegando! Todos são bem-vindos, venham com perguntas!', likes:18, comments:5, tags:['#Evento','#Workshop'] },
+  { id:3, user:'Sam Cruz', badge:'🎭 Artista', emoji:'🎨', color:'#4BAAFF', text:'Acabei de abrir inscrições para o meu zine sobre identidades não-binárias! Colaborações são bem-vindas 💚', likes:31, comments:12, tags:['#Arte','#NãoBinário'] },
+];
 
 function renderPosts() {
-  const container = document.getElementById("postsContainer");
-  container.innerHTML = "";
+  const grid = document.getElementById('postsGrid');
+  grid.innerHTML = '';
   posts.forEach(p => {
-    container.innerHTML += `
-      <div class="post-card">
-        <div class="post-header">
-          <div class="post-avatar" style="background:rgba(255,255,255,0.06)">👥</div>
-          <div><div class="post-user">${p.user}</div><div class="post-badge">${p.badge}</div></div>
+    const div = document.createElement('div');
+    div.className = 'post-card';
+    div.innerHTML = `
+      <div class="post-header">
+        <div class="post-avatar" style="background:linear-gradient(135deg,${p.color}88,${p.color}44)">${p.emoji}</div>
+        <div>
+          <div class="post-user">${p.user}</div>
+          <div class="post-badge">${p.badge}</div>
         </div>
-        <div class="post-text">${p.text}</div>
+      </div>
+      <div class="post-text">${p.text}</div>
+      <div style="margin-bottom:0.8rem;">${p.tags.map(t=>`<span class="tag-chip" style="font-size:0.7rem;">${t}</span>`).join('')}</div>
+      <div class="post-actions">
+        <button class="post-action" onclick="likePost(${p.id},this)">❤️ ${p.likes}</button>
+        <button class="post-action">💬 ${p.comments}</button>
+        <button class="post-action" onclick="sharePost()">↗️ Compartilhar</button>
       </div>`;
+    grid.appendChild(div);
   });
 }
 
-function addPost() {
-  const txt = document.getElementById("postInput").value.trim();
-  if(!txt) return;
-  posts.unshift({ id: Date.now(), user: "Anônimo", badge: "Membro Etec", text: txt });
-  document.getElementById("postInput").value = "";
+function likePost(id, btn) {
+  const p = posts.find(x => x.id === id);
+  if (p) { p.likes++; btn.innerHTML = `❤️ ${p.likes}`; btn.style.color = '#FF6BCD'; }
+}
+function sharePost() { showNotif('🔗 Link copiado!', '#4BFF9D'); }
+
+let selectedTags = [];
+function addTag(el, tag) {
+  if (!selectedTags.includes(tag)) {
+    selectedTags.push(tag);
+    el.style.background = 'rgba(196,75,255,0.15)';
+    el.style.borderColor = 'rgba(196,75,255,0.4)';
+  }
+}
+function publishPost() {
+  const txt = document.getElementById('postInput').value.trim();
+  if (!txt) { showNotif('⚠️ Escreva algo primeiro!', '#FF6BCD'); return; }
+  posts.unshift({ id: Date.now(), user:'Você', badge:'🌈 Membro', emoji:'😊', color:'#C44BFF', text: txt, likes:0, comments:0, tags: selectedTags });
+  document.getElementById('postInput').value = '';
+  selectedTags = [];
+  document.querySelectorAll('#community .tag-chip').forEach(t => { t.style.background=''; t.style.borderColor=''; });
   renderPosts();
-  showNotification("Postado com sucesso!");
+  showNotif('✅ Post publicado!', '#4BFF9D');
 }
 
-function renderEvents() {
-  const container = document.getElementById("eventsContainer");
-  container.innerHTML = "";
-  events.forEach(e => {
-    container.innerHTML += `
-      <div class="event-card">
-        <div class="event-banner">${e.icon}</div>
-        <div class="event-body">
-          <div class="event-date">📅 ${e.date}</div>
-          <div class="event-title">${e.title}</div>
-          <div class="event-loc">📍 ${e.loc}</div>
-        </div>
-      </div>`;
-  });
+// ======= PROFILE =======
+function updatePreview(field, val) {
+  if (field === 'name') {
+    document.getElementById('namePreview').textContent = val || 'Seu Nome';
+    document.getElementById('cardName').textContent = val || 'Seu Nome';
+  }
+  if (field === 'bio') {
+    document.getElementById('bioPreview').textContent = val || 'Sua bio aparecerá aqui...';
+  }
 }
-
-function submitEventForm() {
-  const title = document.getElementById("evTitle").value;
-  const date = document.getElementById("evDate").value;
-  const loc = document.getElementById("evLoc").value;
-  if(!title || !date || !loc) return;
-  events.unshift({ id: Date.now(), title, date, loc, icon: "🌈", priceType:"free", priceText:"Livre" });
-  renderEvents(); closeCreateEvent();
-  showNotification("Evento publicado!");
+function updatePronounPreview(val) {
+  document.getElementById('cardPronouns').textContent = val;
 }
-
-/* ========== LÓGICA DE ABAS E PREVIEW DO PERFIL ========== */
-function switchTab(tab) {
+function updateIdentityTags() {
+  const sex = document.querySelector('#tab-identity select:nth-child(1)')?.value;
+  const gen = document.querySelector('#tab-identity select:nth-child(2)')?.value;
+  const tags = document.getElementById('identityTags');
+  tags.innerHTML = '<span class="identity-tag">🌈 LGBT+</span>';
+  if (sex) tags.innerHTML += `<span class="identity-tag" style="background:rgba(196,75,255,0.15);border-color:rgba(196,75,255,0.3);">${sex}</span>`;
+  if (gen) {
+    const isAgender = gen === 'agênero';
+    tags.innerHTML += `<span class="identity-tag" style="background:${isAgender?'rgba(184,244,131,0.1)':'rgba(75,170,255,0.1)'};border-color:${isAgender?'rgba(184,244,131,0.3)':'rgba(75,170,255,0.3)'};">${gen.replace('_',' ')}</span>`;
+  }
+}
+function switchTab(id, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('btn-' + tab).classList.add('active');
-  document.getElementById('tab-' + tab).classList.add('active');
+  btn.classList.add('active');
+  document.getElementById('tab-' + id).classList.add('active');
 }
-
-function toggleCustomPronoun() {
-  const select = document.getElementById("inputPronounSelect").value;
-  const customBox = document.getElementById("customPronounBox");
-  customBox.style.display = (select === "custom") ? "block" : "none";
-  updateProfilePreview();
-}
-
-function updateProfilePreview() {
-  // Nome
-  document.getElementById("previewName").textContent = document.getElementById("inputName").value || "Estudante";
-  
-  // Pronomes
-  const pronounSelect = document.getElementById("inputPronounSelect").value;
-  if (pronounSelect === "custom") {
-    document.getElementById("previewPronouns").textContent = document.getElementById("inputPronounsCustom").value || "Não informado";
-  } else {
-    document.getElementById("previewPronouns").textContent = pronounSelect;
-  }
-
-  // Vínculo, Gênero e Orientação
-  document.getElementById("previewVinculo").textContent = document.getElementById("inputVinculo").value;
-  document.getElementById("previewGenero").textContent = document.getElementById("inputGenero").value;
-  document.getElementById("previewOrientacao").textContent = document.getElementById("inputOrientacao").value;
-  
-  // Biografia
-  document.getElementById("previewBio").textContent = document.getElementById("inputBio").value || "Sem biografia.";
-  
-  // Renderizar Conquistas Ativas no Cartão
-  renderPreviewBadges();
-}
-
-function toggleBadgeItem(elementId, badgeName) {
-  const el = document.getElementById(elementId);
-  el.classList.toggle("selected");
-  
-  if (el.classList.contains("selected")) {
-    if (!activeBadges.includes(badgeName)) activeBadges.push(badgeName);
-  } else {
-    activeBadges = activeBadges.filter(b => b !== badgeName);
-  }
-  
-  // Atualiza dinamicamente a barra de progresso / Nível com base nas insígnias ganhas
-  const totalBadges = activeBadges.length;
-  const levelFill = document.getElementById("previewLevelBar");
-  const levelText = document.getElementById("previewLevel");
-  
-  if(totalBadges <= 1) { levelText.textContent = "Nv. 1"; levelFill.style.width = "25%"; }
-  else if(totalBadges === 2) { levelText.textContent = "Nv. 3"; levelFill.style.width = "65%"; }
-  else if(totalBadges === 3) { levelText.textContent = "Nv. 4"; levelFill.style.width = "85%"; }
-  else { levelText.textContent = "Nv. Max"; levelFill.style.width = "100%"; }
-
-  updateProfilePreview();
-}
-
-function renderPreviewBadges() {
-  const container = document.getElementById("previewBadges");
-  container.innerHTML = "";
-  activeBadges.forEach(badge => {
-    let style = "";
-    if (badge.includes("Expert")) style = "background:rgba(6,182,212,0.12); border-color:rgba(6,182,212,0.25); color:#06b6d4;";
-    if (badge.includes("Ativista")) style = "background:rgba(255,107,157,0.12); border-color:rgba(255,107,157,0.25); color:#ff6bcd;";
-    if (badge.includes("Aliado")) style = "background:rgba(75,170,255,0.12); border-color:rgba(75,170,255,0.25); color:#4baaff;";
-    
-    container.innerHTML += `<span class="badge" style="${style}">${badge}</span>`;
-  });
-}
-
-function handleAvatarChange(input) {
+function saveProfile() { showNotif('✅ Perfil salvo com sucesso!', '#4BFF9D'); }
+function shareCard() { showNotif('🔗 Cartão copiado para compartilhar!', '#C44BFF'); }
+function previewAvatar(input) {
   if (input.files && input.files[0]) {
     const reader = new FileReader();
-    reader.onload = function(e) {
-      document.getElementById('previewAvatar').innerHTML = `<img src="${e.target.result}" style="width:100%; height:100%; object-fit:cover;">`;
+    reader.onload = e => {
+      document.getElementById('avatarPreview').style.backgroundImage = `url(${e.target.result})`;
+      document.getElementById('avatarPreview').style.backgroundSize = 'cover';
+      document.getElementById('avatarEmoji').style.display = 'none';
     };
     reader.readAsDataURL(input.files[0]);
-    showNotification("Foto carregada com sucesso!");
+  }
+}
+function generatePhrase() {
+  const phrases = [
+    'Criature coloride que vive além dos rótulos ✨',
+    'Minha existência é resistência e arte 🎨',
+    'Livre como o arco-íris após a tempestade 🌈',
+    'Quebrando caixas desde sempre 📦✂️',
+    'Espaço seguro ambulante para a comunidade 🏡',
+    'Agênero, orgulhose e presente 💚',
+  ];
+  document.getElementById('phraseInput').value = phrases[Math.floor(Math.random() * phrases.length)];
+  showNotif('✨ Frase gerada pela IA!', '#C44BFF');
+}
+function togglePrivacy(row) {
+  const dot = row.querySelector('.toggle-dot');
+  const inner = dot.querySelector('div');
+  const isOn = inner.style.left !== '3px' && inner.style.right !== '';
+  if (!isOn || inner.style.right === '3px') {
+    dot.style.background = 'rgba(196,75,255,0.3)';
+    inner.style.right = '3px'; inner.style.left = '';
+    inner.style.background = '#C44BFF';
+  } else {
+    dot.style.background = 'rgba(255,255,255,0.08)';
+    inner.style.left = '3px'; inner.style.right = '';
+    inner.style.background = '#888';
   }
 }
 
-function initInterests() {
-  const interests = ["Direitos LGBTQIAPN+", "História do Movimento", "Linguagem Neutra", "Políticas Educacionais de Inclusão"];
+// ======= INTERESTS & PERSONALITY =======
+const interests = ['🎵 Música','🎨 Arte','📚 Educação','💃 Dança','🏳️‍🌈 Ativismo','📸 Fotografia','✍️ Escrita','🎮 Games','🌱 Sustentabilidade','🎭 Teatro','🤝 Voluntariado','💻 Tecnologia'];
+const personalities = ['🦋 Criativo','🌟 Empático','🗣️ Comunicativo','🤔 Reflexivo','💪 Ativista','🎯 Focado','🌈 Otimista','🔍 Curioso'];
+const eventTypes = ['🎉 Festas','📚 Workshops','🎭 Teatro','🏃 Esportes','🎵 Shows','💬 Rodas de Conversa','🌐 Online','🏳️‍🌈 Marchas'];
+
+function renderInterests() {
   const c = document.getElementById('interestsContainer');
   interests.forEach(i => {
     const span = document.createElement('span');
     span.className = 'tag-chip';
     span.textContent = i;
-    span.onclick = () => { span.classList.toggle('active'); };
+    span.style.cursor = 'pointer';
+    span.onclick = () => { span.classList.toggle('active'); span.style.background = span.classList.contains('active') ? 'rgba(196,75,255,0.2)' : ''; span.style.borderColor = span.classList.contains('active') ? 'rgba(196,75,255,0.5)' : ''; };
     c.appendChild(span);
+  });
+  const p = document.getElementById('personalityContainer');
+  personalities.forEach(i => {
+    const span = document.createElement('span');
+    span.className = 'tag-chip';
+    span.textContent = i;
+    span.style.cursor = 'pointer';
+    span.onclick = () => { span.classList.toggle('active'); span.style.background = span.classList.contains('active') ? 'rgba(196,75,255,0.2)' : ''; span.style.borderColor = span.classList.contains('active') ? 'rgba(196,75,255,0.5)' : ''; };
+    p.appendChild(span);
+  });
+  const et = document.getElementById('eventTypesContainer');
+  eventTypes.forEach(i => {
+    const span = document.createElement('span');
+    span.className = 'tag-chip';
+    span.textContent = i;
+    span.style.cursor = 'pointer';
+    span.onclick = () => { span.classList.toggle('active'); span.style.background = span.classList.contains('active') ? 'rgba(196,75,255,0.2)' : ''; span.style.borderColor = span.classList.contains('active') ? 'rgba(196,75,255,0.5)' : ''; };
+    et.appendChild(span);
   });
 }
 
-function changeTheme(theme) {
-  document.body.className = "";
-  if(theme !== 'default') document.body.classList.add('theme-' + theme);
-  showNotification(`Tema alterado para: Orgulho ${theme.toUpperCase()}`);
-}
+// ======= INIT =======
+document.addEventListener('DOMContentLoaded', () => {
+  renderSigla();
+  renderPosts();
+  renderEvents();
+  renderInterests();
+});
 
-function saveProfileData() { showNotification("Configurações salvas e aplicadas na conta local!"); }
-function showNotification(msg) { const n = document.getElementById("notif"); n.textContent = msg; n.classList.add("show"); setTimeout(() => n.classList.remove("show"), 4000); }
+// Close modal on overlay click
+document.getElementById('createEventModal').addEventListener('click', function(e) {
+  if (e.target === this) closeCreateEvent();
+});
 </script>
 </body>
 </html>
