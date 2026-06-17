@@ -588,6 +588,100 @@
     background:linear-gradient(90deg,#C44BFF,#FF6BCD);
     transition:width 1s ease;
   }
+
+/* ===== CORREÇÕES MOBILE ===== */
+html,body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+img,svg{
+  max-width:100%;
+  height:auto;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+@media (max-width:768px){
+
+  nav{
+    padding:1rem;
+  }
+
+  section{
+    padding:4rem 1rem;
+  }
+
+  .hero-content,
+  .container{
+    width:100%;
+    overflow:hidden;
+  }
+
+  .mascot-hero{
+    flex-direction:column;
+    align-items:center;
+    gap:1.5rem;
+  }
+
+  .agender-famous-grid,
+  .posts-grid,
+  .events-grid,
+  .sigla-grid,
+  .banners-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .profile-form,
+  .agender-hero,
+  .form-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .profile-sidebar{
+    position:static;
+  }
+
+  .event-footer,
+  .post-footer{
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+  }
+
+  .tab-nav{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:6px;
+  }
+
+  .tab-btn{
+    flex-shrink:0;
+  }
+}
+
+/* EVITA ELEMENTOS SOBREPONDO NO FINAL */
+.posts-grid,
+.events-grid,
+.sigla-grid,
+.agender-famous-grid,
+.banners-grid{
+  align-items:start;
+}
+
+.post-card,
+.event-card,
+.sigla-card,
+.famous-card,
+.banner-card{
+  height:auto;
+  min-width:0;
+}
+
 </style>
 </head>
 <body>
@@ -1456,7 +1550,171 @@ function renderSigla() {
     card.className = 'sigla-card';
     card.style.cssText += `cursor:default;`;
     card.innerHTML = `
-      <style>.sigla-card[data-id="${s.letter}"]::before { background: ${s.color}; }</style>
+      <style>/* ===== MODO MOAI RESPONSIVO 🗿 ===== */
+
+* {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* imagens e svg nunca quebram a tela */
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* container adaptável */
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+/* navegação */
+@media (max-width: 768px){
+
+  nav {
+    padding: 14px 18px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+
+  /* hero */
+  #hero {
+    padding: 90px 18px 40px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+
+  /* botões empilham */
+  .hero-btns {
+    flex-direction: column;
+    width:100%;
+  }
+
+  .hero-btns a {
+    width:100%;
+    text-align:center;
+  }
+
+
+  /* mascotes */
+  .mascot-hero {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .mascot-container svg {
+    width:100px;
+  }
+
+
+  /* grids */
+  .banners-grid,
+  .sigla-grid,
+  .events-grid,
+  .posts-grid,
+  .agender-famous-grid,
+  .stats-row {
+    grid-template-columns:1fr !important;
+  }
+
+
+  /* perfil */
+  .profile-form {
+    grid-template-columns:1fr;
+  }
+
+
+  /* modal */
+  .modal-box {
+    padding:1.3rem;
+  }
+
+
+  /* textos */
+  .section-title {
+    font-size:2rem;
+  }
+
+
+  /* cards */
+  .banner-card {
+    height:auto;
+  }
+
+  .event-card,
+  .post-card,
+  .sigla-card {
+    width:100%;
+  }
+
+
+  /* tabelas/linhas */
+  .form-grid {
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+/* tablets */
+@media (min-width:769px) and (max-width:1100px){
+
+  .container {
+    width:90%;
+  }
+
+  .hero-title {
+    font-size:5rem;
+  }
+
+  .agender-hero {
+    gap:2rem;
+  }
+
+}
+
+
+/* celulares pequenos */
+@media (max-width:420px){
+
+  nav {
+    position:fixed;
+  }
+
+  .nav-btn {
+    display:none;
+  }
+
+  .hero-title {
+    font-size:2.2rem;
+  }
+
+  section {
+    padding:3rem 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding:0.8rem 1rem;
+  }
+
+}
+</style>
       <div class="sigla-letter" style="color:${s.color}">${s.letter}</div>
       <div class="sigla-name">${s.name}</div>
       <div class="sigla-desc">${s.desc}</div>
